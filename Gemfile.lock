@@ -51,10 +51,10 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    jekyll_flexible_include (2.0.22)
+    jekyll_flexible_include (2.0.25)
       jekyll-sass-converter (= 2.2.0)
-      jekyll_from_to_until
-      jekyll_plugin_support (>= 0.8.4)
+      jekyll_from_to_until (>= 1.0.5)
+      jekyll_plugin_support (>= 1.0.3)
       rugged
     jekyll_from_to_until (1.0.6)
       htmlentities
@@ -63,7 +63,7 @@ GEM
     jekyll_plugin_logger (2.1.2)
       bump
       jekyll (>= 3.5.0)
-    jekyll_plugin_support (0.8.6)
+    jekyll_plugin_support (1.0.3)
       facets
       jekyll (>= 3.5.0)
       jekyll_plugin_logger
