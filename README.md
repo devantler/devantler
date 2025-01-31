@@ -1,14 +1,5 @@
 # Hi there 👋🏻☸️
 
-<style>
-  summary > div {
-    display: inline-block;
-    width: calc(100% - 14px);
-    vertical-align: top;
-    margin-top: -22px
-  }
-</style>
-
 <div align="center">
   <img class="lazy" src="assets/images/profile.jpg" data-src="assets/images/profile.jpg" alt="Me summer 2024" width="400">
 </div>
@@ -98,16 +89,9 @@ Working as a Consultant at Energinet, I'm part of a Platform team in the Infrast
 - Hosting and facilitating meetups, hackathons, and workshops.
 - Promoting modern software development practices like GitHub Flow, DevOps, cloud-native, and open source practices.
 
-<details>
-  <summary>
-    <div>
-      <h3>
-        <span>Software Engineer and Open Source Community Facilitator</span>
-        <span>Aug 2023 - Nov 2024</span>
-      </h3><br>
-      <i>Energinet, Fredericia - Junior Consultant</i>
-    </div>
-  </summary>
+### Software Engineer and Open Source Community Facilitator <span style="float:right">Aug 2023 - Nov 2024</span>
+
+_Energinet, Fredericia - Junior Consultant_
 
 Working as a Junior Consultant at Energinet, I'm part of the Substation Data team in the Innovation department. As a member of the Substation Data team my primary focus is on platform engineering and IT/OT convergence. The team's vision is to modernize the IT/OT landscape by providing E2E data solutions that enable other teams to scale and innovate their business cases.
 
@@ -122,18 +106,9 @@ From September 2024 to June 2025 I was lent out to a platform engineering team, 
 - Hosting and facilitating meetups, hackathons, and workshops.
 - Promoting modern software development practices like GitHub Flow, DevOps, cloud-native, and open source practices.
 
-</details>
+### Teaching Assistant <span style="float:right">Sep 2022 - Aug 2023</span>
 
-<details>
-  <summary>
-    <div>
-      <h3>
-        <span>Teaching Assistant</span>
-        <span>Sep 2022 - Aug 2023<span>
-      </h3><br>
-      <i>University of Southern Denmark, Odense</i>
-    </div>
-  </summary>
+_University of Southern Denmark, Odense_
 
 Working as a teaching assistant in Big Data at the University of Southern Denmark, I was part of the teaching team for the Big Data course. I was responsible for creating course material, teaching students, and helping students with their exercises. The course was focused on teaching students how to work with big data and how to use big data technologies to solve real-world problems like handling large amounts of data, analyzing data, and visualizing data.
 
@@ -141,20 +116,11 @@ Working as a teaching assistant in Big Data at the University of Southern Denmar
 - Teaching students.
 - Helping students with their exercises.
 
-</details>
+### Student Software Developer <span style="float:right">July 2022 - Aug 2023</span>
 
-<details>
-  <summary>
-    <div>
-      <h3>
-        <span>Student Software Developer </span>
-        <span>July 2022 - Aug 2023</span>
-      </h3><br>
-      <i>Umbraco, Odense</i>
-    </div>
-  </summary>
+_Umbraco, Odense_
 
-  Working as a student software developer at Umbraco, I was part of the Umbraco Heartcore team. The team is responsible for developing and maintaining the Umbraco Heartcore headless CMS. The team is very focused on building a good user experience for Umbraco Heartcore users, while ensuring that the product is reliable and scalable.
+Working as a student software developer at Umbraco, I was part of the Umbraco Heartcore team. The team is responsible for developing and maintaining the Umbraco Heartcore headless CMS. The team is very focused on building a good user experience for Umbraco Heartcore users, while ensuring that the product is reliable and scalable.
 
 - Developing and maintaining the Umbraco Heartcore Product.
 - Working with operation of the Umbraco Heartcore Product in Azure Portal.
@@ -162,18 +128,9 @@ Working as a teaching assistant in Big Data at the University of Southern Denmar
 - Working with CI/CD pipelines in Azure DevOps.
 - Working in a DevOps team with a focus on automation and monitoring.
 
-</details>
+### Student Software Developer <span style="float:right">Nov 2021 - July 2022</span>
 
-<details>
-  <summary>
-    <div>
-      <h3>
-        <span>Student Software Developer</span>
-        <span>Nov 2021 - July 2022</span>
-      </h3><br>
-      <i>FiftyTwo, Kolding</i>
-    </div>
-  </summary>
+_FiftyTwo, Kolding_
 
 Working as a student software developer at FiftyTwo, I was part of the development team for an e-commerce platform. The team was responsible for developing and maintaining the e-commerce platform, while ensuring that the platform was reliable and scalable. The team was focused on finding the right balance between maintaining a reliable platform and developing new features.
 
@@ -182,18 +139,9 @@ Working as a student software developer at FiftyTwo, I was part of the developme
 - Working with SQL Server and Stored Procedures.
 - Working with Kabana and Network Monitoring.
 
-</details>
+### Student Software Developer <span style="float:right">Feb 2021 - Nov 2021</span>
 
-<details>
-  <summary>
-    <div>
-      <h3>
-        <span>Student Software Developer</span>
-        <span>Feb 2021 - Nov 2021</span>
-      </h3><br>
-      <i>Maersk Mc-Kinney Moller Institute, Odense</i>
-    </div>
-  </summary>
+_Maersk Mc-Kinney Moller Institute, Odense_
 
 Working as a student software developer at the Maersk Mc-Kinney Moller Institute, I was the sole developer of a platform that was used in research projects and course material to explore the possibilities of mapping and visualizing Business Ecosystems with UML. The platform was developed in C# and Blazor WebAssembly and was used to create and visualize Business Ecosystems with a UML editor. Students and researchers were able to create user accounts and manage their Business Ecosystems in the platform.
 
@@ -205,26 +153,15 @@ Working as a student software developer at the Maersk Mc-Kinney Moller Institute
 - Working closely with researchers and students.
 - Working alone on a project from start to finish.
 
-</details>
+### Teaching Assistant <span style="float:right">Sep 2020 - Dec 2020</span>
 
-<details>
-  <summary>
-    <div>
-      <h3>
-        <span>Teaching Assistant</span>
-        <span>Sep 2020 - Dec 2020</span>
-      </h3><br>
-      <i>University of Southern Denmark, Odense</i>
-    </div>
-  </summary>
+_University of Southern Denmark, Odense_
 
 Working as a teaching assistant in Object-Oriented Programming at the University of Southern Denmark, I was part of the teaching team for the Object-Oriented Programming course. I was responsible for creating course material, teaching students, and helping students with their exercises. The course was focused on teaching new students the core principles of object-oriented programming and how to code in Java.
 
 - Creating course material.
 - Teaching students.
 - Helping students with their exercises.
-
-</details>
 
 ### Student Software Developer <span style="float:right">Feb 2018 - May 2019</span>
 
@@ -272,7 +209,7 @@ Working as a student software developer at GF Forsikring, I was part of the deve
 | [✅ .NET Kubernetes Validator](https://github.com/devantler/dotnet-kubernetes-validator)                 | A simple .NET library for running client-side and server-side validations on Kubernetes   | Active |
 | [🌐 .NET Kubernetes Provisioner](https://github.com/devantler/dotnet-kubernetes-provisioner)             | A simple .NET library for provisioning Kubernetes clusters and resources.                 | Active |
 | [🐳 .NET Container Engine Provisioner](https://github.com/devantler/dotnet-container-engine-provisioner) | A simple .NET library for provisioning resources to container engines.                    | Active |
-| [🔓 .NET Secret Manager](https://github.com/devantler/dotnet-secret-manager)                             | A simple .NET library to manage asymmetric keys                                           | Active |
+| [🔓 .NET Secret Manager](https://github.com/devantler/dotnet-secret-manager)                                   | A simple .NET library to manage asymmetric keys                                           | Active |
 | [📄 .NET Template Engine](https://github.com/devantler/dotnet-template-engine)                           | A simple .NET library to genarate files from .sbn templates                               | Active |
 | [🗝️ .NET Keys](https://github.com/devantler/dotnet-keys)                                                 | A simple .NET library to provide intelligent models for assymetric keys                   | Active |
 | [▶️ .NET CLI Runner](https://github.com/devantler/dotnet-cli-runner)                                     | A simple .NET library to run CLI commands from .NET code                                  | Active |
