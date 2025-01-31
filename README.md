@@ -188,6 +188,7 @@ Working as a student software developer at GF Forsikring, I was part of the deve
 
 <div align="center">
   <img src="assets/images/courses/kodecloud-kubernetes-for-the-absolute-beginners-course-completion-certificate.png" data-src="assets/images/courses/kodecloud-kubernetes-for-the-absolute-beginners-course-completion-certificate.png" alt="KodeKloud: Kubernetes for the Absolute Beginners" width="600">
+  <img src="assets/images/courses/kodecloud-kubernetes-kcna-course-completion-certificate.png" data-src="assets/images/courses/kodecloud-kubernetes-kcna-course-completion-certificate.png" alt="KodeKloud: Kubernetes and Cloud-Native Associate (KCNA)" width="600">
 </div>
 
 ## [Projects 📽️](https://devantler.com/projects)
