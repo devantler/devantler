@@ -1,5 +1,14 @@
 # Hi there 👋🏻☸️
 
+<style>
+  summary > div {
+    display: inline-block;
+    width: calc(100% - 14px);
+    vertical-align: top;
+    margin-top: -22px
+  }
+</style>
+
 <div align="center">
   <img class="lazy" src="assets/images/profile.jpg" data-src="assets/images/profile.jpg" alt="Me summer 2024" width="400">
 </div>
@@ -73,17 +82,9 @@ The talk also prestens the roadmap for KSail along with an open invitation to th
 
 Years of experience in software development have given me a solid foundation in modern software development practices and technologies. I have worked on a wide range of projects, from developing and maintaining e-commerce platforms to creating and operating cloud-native solutions. I have a strong passion for learning and sharing knowledge, and I'm always looking for new challenges and opportunities to grow as a software engineer. I have a sharp eye for detail and a strong focus on quality and simplicity in everything I do. I love working with people who share my passion for software development and who are not afraid to challenge the status quo.
 
-<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
-  <summary>
-    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
-      <h3 style="display: flex;justify-content: space-between;">
-        <span>Platform Engineer and Open Source Community Facilitator</span>
-        <span>Nov 2024 - Now</span>
-      </h3>
-      <i>Energinet, Fredericia - Consultant</i>
-    </div>
-  </summary>
-<br>
+### Platform Engineer and Open Source Community Facilitator <span style="float:right">Nov 2024 - Now</span>
+
+_Energinet, Fredericia - Consultant_
 
 Working as a Consultant at Energinet, I'm part of a Platform team in the Infrastructure and Platforms department. As a member of the Platform team my primary focus is on platform engineering. The team's vision provide a Kubernetes platform to create and manage single-tenant and multi-tenant Kubernetes clusters for the organization. The team is very focused on building a good user experience for the platform users, while ensuring that the platform is reliable and scalable.
 
@@ -97,19 +98,16 @@ Working as a Consultant at Energinet, I'm part of a Platform team in the Infrast
 - Hosting and facilitating meetups, hackathons, and workshops.
 - Promoting modern software development practices like GitHub Flow, DevOps, cloud-native, and open source practices.
 
-</details>
-
-<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);" open>
+<details>
   <summary>
-    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
-      <h3 style="display: flex;justify-content: space-between;">
+    <div>
+      <h3>
         <span>Software Engineer and Open Source Community Facilitator</span>
         <span>Aug 2023 - Nov 2024</span>
-      </h3>
+      </h3><br>
       <i>Energinet, Fredericia - Junior Consultant</i>
     </div>
   </summary>
-<br>
 
 Working as a Junior Consultant at Energinet, I'm part of the Substation Data team in the Innovation department. As a member of the Substation Data team my primary focus is on platform engineering and IT/OT convergence. The team's vision is to modernize the IT/OT landscape by providing E2E data solutions that enable other teams to scale and innovate their business cases.
 
@@ -126,17 +124,16 @@ From September 2024 to June 2025 I was lent out to a platform engineering team, 
 
 </details>
 
-<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
+<details>
   <summary>
-    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
-      <h3 style="display: flex;justify-content: space-between;">
+    <div>
+      <h3>
         <span>Teaching Assistant</span>
         <span>Sep 2022 - Aug 2023<span>
-      </h3>
+      </h3><br>
       <i>University of Southern Denmark, Odense</i>
     </div>
   </summary>
-<br>
 
 Working as a teaching assistant in Big Data at the University of Southern Denmark, I was part of the teaching team for the Big Data course. I was responsible for creating course material, teaching students, and helping students with their exercises. The course was focused on teaching students how to work with big data and how to use big data technologies to solve real-world problems like handling large amounts of data, analyzing data, and visualizing data.
 
@@ -146,19 +143,18 @@ Working as a teaching assistant in Big Data at the University of Southern Denmar
 
 </details>
 
-<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
+<details>
   <summary>
-    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
-      <h3 style="display: flex;justify-content: space-between;">
+    <div>
+      <h3>
         <span>Student Software Developer </span>
         <span>July 2022 - Aug 2023</span>
-      </h3>
+      </h3><br>
       <i>Umbraco, Odense</i>
     </div>
   </summary>
-<br>
 
-Working as a student software developer at Umbraco, I was part of the Umbraco Heartcore team. The team is responsible for developing and maintaining the Umbraco Heartcore headless CMS. The team is very focused on building a good user experience for Umbraco Heartcore users, while ensuring that the product is reliable and scalable.
+  Working as a student software developer at Umbraco, I was part of the Umbraco Heartcore team. The team is responsible for developing and maintaining the Umbraco Heartcore headless CMS. The team is very focused on building a good user experience for Umbraco Heartcore users, while ensuring that the product is reliable and scalable.
 
 - Developing and maintaining the Umbraco Heartcore Product.
 - Working with operation of the Umbraco Heartcore Product in Azure Portal.
@@ -168,17 +164,16 @@ Working as a student software developer at Umbraco, I was part of the Umbraco He
 
 </details>
 
-<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
+<details>
   <summary>
-    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
-      <h3 style="display: flex;justify-content: space-between;">
+    <div>
+      <h3>
         <span>Student Software Developer</span>
         <span>Nov 2021 - July 2022</span>
-      </h3>
+      </h3><br>
       <i>FiftyTwo, Kolding</i>
     </div>
   </summary>
-<br>
 
 Working as a student software developer at FiftyTwo, I was part of the development team for an e-commerce platform. The team was responsible for developing and maintaining the e-commerce platform, while ensuring that the platform was reliable and scalable. The team was focused on finding the right balance between maintaining a reliable platform and developing new features.
 
@@ -189,17 +184,16 @@ Working as a student software developer at FiftyTwo, I was part of the developme
 
 </details>
 
-<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
+<details>
   <summary>
-    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
-      <h3 style="display: flex;justify-content: space-between;">
+    <div>
+      <h3>
         <span>Student Software Developer</span>
         <span>Feb 2021 - Nov 2021</span>
-      </h3>
+      </h3><br>
       <i>Maersk Mc-Kinney Moller Institute, Odense</i>
     </div>
   </summary>
-<br>
 
 Working as a student software developer at the Maersk Mc-Kinney Moller Institute, I was the sole developer of a platform that was used in research projects and course material to explore the possibilities of mapping and visualizing Business Ecosystems with UML. The platform was developed in C# and Blazor WebAssembly and was used to create and visualize Business Ecosystems with a UML editor. Students and researchers were able to create user accounts and manage their Business Ecosystems in the platform.
 
@@ -213,17 +207,16 @@ Working as a student software developer at the Maersk Mc-Kinney Moller Institute
 
 </details>
 
-<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
+<details>
   <summary>
-    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
-      <h3 style="display: flex;justify-content: space-between;">
+    <div>
+      <h3>
         <span>Teaching Assistant</span>
         <span>Sep 2020 - Dec 2020</span>
-      </h3>
+      </h3><br>
       <i>University of Southern Denmark, Odense</i>
     </div>
   </summary>
-<br>
 
 Working as a teaching assistant in Object-Oriented Programming at the University of Southern Denmark, I was part of the teaching team for the Object-Oriented Programming course. I was responsible for creating course material, teaching students, and helping students with their exercises. The course was focused on teaching new students the core principles of object-oriented programming and how to code in Java.
 
@@ -233,17 +226,9 @@ Working as a teaching assistant in Object-Oriented Programming at the University
 
 </details>
 
-<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
-  <summary>
-    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
-      <h3 style="display: flex;justify-content: space-between;">
-        <span>Student Software Developer</span>
-        <span>Feb 2018 - May 2019</span>
-      </h3>
-      <i>GF Forsikring, Odense</i>
-    </div>
-  </summary>
-<br>
+### Student Software Developer <span style="float:right">Feb 2018 - May 2019</span>
+
+_GF Forsikring, Odense_
 
 Working as a student software developer at GF Forsikring, I was part of the development team for the GF Forsikring website and landing pages. The team was responsible for developing and maintaining the sites in Sitecore. The team was focused on creating a good user experience for GF Forsikring customers, while ensuring that the sites were reliable.
 
@@ -252,8 +237,6 @@ Working as a student software developer at GF Forsikring, I was part of the deve
 - Working with AngularJS and many other front-end technologies.
 - Working with SQL Server.
 - Working with the Marketing team to quickly create landing pages for campaigns.
-
-</details>
 
 ## Achievements
 
