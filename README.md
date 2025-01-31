@@ -1,26 +1,5 @@
 # Hi there 👋🏻☸️
 
-<style>
-  .cv-entry {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  .cv-entry-summary > div {
-    display: inline-block;
-    width: calc(100% - 14px);
-    vertical-align: top;
-    margin-top: -22px
-  }
-  .cv-entry-summary > div > h3 {
-    display: flex;
-    justify-content: space-between;
-  }
-</style>
-
 <div align="center">
   <img class="lazy" src="assets/images/profile.jpg" data-src="assets/images/profile.jpg" alt="Me summer 2024" width="400">
 </div>
@@ -94,10 +73,10 @@ The talk also prestens the roadmap for KSail along with an open invitation to th
 
 Years of experience in software development have given me a solid foundation in modern software development practices and technologies. I have worked on a wide range of projects, from developing and maintaining e-commerce platforms to creating and operating cloud-native solutions. I have a strong passion for learning and sharing knowledge, and I'm always looking for new challenges and opportunities to grow as a software engineer. I have a sharp eye for detail and a strong focus on quality and simplicity in everything I do. I love working with people who share my passion for software development and who are not afraid to challenge the status quo.
 
-<details class="cv-entry" open>
-  <summary class="cv-entry-summary">
-    <div>
-      <h3>
+<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
+  <summary>
+    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
+      <h3 style="display: flex;justify-content: space-between;">
         <span>Platform Engineer and Open Source Community Facilitator</span>
         <span>Nov 2024 - Now</span>
       </h3>
@@ -120,10 +99,10 @@ Working as a Consultant at Energinet, I'm part of a Platform team in the Infrast
 
 </details>
 
-<details class="cv-entry">
-  <summary class="cv-entry-summary">
-    <div>
-      <h3>
+<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);" open>
+  <summary>
+    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
+      <h3 style="display: flex;justify-content: space-between;">
         <span>Software Engineer and Open Source Community Facilitator</span>
         <span>Aug 2023 - Nov 2024</span>
       </h3>
@@ -147,10 +126,10 @@ From September 2024 to June 2025 I was lent out to a platform engineering team, 
 
 </details>
 
-<details class="cv-entry">
-  <summary class="cv-entry-summary">
-    <div>
-      <h3>
+<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
+  <summary>
+    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
+      <h3 style="display: flex;justify-content: space-between;">
         <span>Teaching Assistant</span>
         <span>Sep 2022 - Aug 2023<span>
       </h3>
@@ -167,10 +146,10 @@ Working as a teaching assistant in Big Data at the University of Southern Denmar
 
 </details>
 
-<details class="cv-entry">
-  <summary class="cv-entry-summary">
-    <div>
-      <h3>
+<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
+  <summary>
+    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
+      <h3 style="display: flex;justify-content: space-between;">
         <span>Student Software Developer </span>
         <span>July 2022 - Aug 2023</span>
       </h3>
@@ -189,10 +168,10 @@ Working as a student software developer at Umbraco, I was part of the Umbraco He
 
 </details>
 
-<details class="cv-entry">
-  <summary class="cv-entry-summary">
-    <div>
-      <h3>
+<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
+  <summary>
+    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
+      <h3 style="display: flex;justify-content: space-between;">
         <span>Student Software Developer</span>
         <span>Nov 2021 - July 2022</span>
       </h3>
@@ -210,10 +189,10 @@ Working as a student software developer at FiftyTwo, I was part of the developme
 
 </details>
 
-<details class="cv-entry">
-  <summary class="cv-entry-summary">
-    <div>
-      <h3>
+<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
+  <summary>
+    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
+      <h3 style="display: flex;justify-content: space-between;">
         <span>Student Software Developer</span>
         <span>Feb 2021 - Nov 2021</span>
       </h3>
@@ -234,10 +213,10 @@ Working as a student software developer at the Maersk Mc-Kinney Moller Institute
 
 </details>
 
-<details class="cv-entry">
-  <summary class="cv-entry-summary">
-    <div>
-      <h3>
+<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
+  <summary>
+    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
+      <h3 style="display: flex;justify-content: space-between;">
         <span>Teaching Assistant</span>
         <span>Sep 2020 - Dec 2020</span>
       </h3>
@@ -254,10 +233,10 @@ Working as a teaching assistant in Object-Oriented Programming at the University
 
 </details>
 
-<details class="cv-entry">
-  <summary class="cv-entry-summary">
-    <div>
-      <h3>
+<details style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(10px);padding: 10px;margin: 10px 0;border-radius: 5px;border: 1px solid rgba(255, 255, 255, 0.2);">
+  <summary>
+    <div style="display: inline-block;width: calc(100% - 14px);vertical-align: top;margin-top: -22px">
+      <h3 style="display: flex;justify-content: space-between;">
         <span>Student Software Developer</span>
         <span>Feb 2018 - May 2019</span>
       </h3>
