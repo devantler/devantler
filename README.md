@@ -244,7 +244,7 @@ Working as a student software developer at GF Forsikring, I was part of the deve
 | [✅ .NET Kubernetes Validator](https://github.com/devantler/dotnet-kubernetes-validator)                 | A simple .NET library for running client-side and server-side validations on Kubernetes   | Active |
 | [🌐 .NET Kubernetes Provisioner](https://github.com/devantler/dotnet-kubernetes-provisioner)             | A simple .NET library for provisioning Kubernetes clusters and resources.                 | Active |
 | [🐳 .NET Container Engine Provisioner](https://github.com/devantler/dotnet-container-engine-provisioner) | A simple .NET library for provisioning resources to container engines.                    | Active |
-| [🔓 .NET Secret Manager](https://github.com/devantler/dotnet-secret-manager)                                   | A simple .NET library to manage asymmetric keys                                           | Active |
+| [🔓 .NET Secret Manager](https://github.com/devantler/dotnet-secret-manager)                             | A simple .NET library to manage asymmetric keys                                           | Active |
 | [📄 .NET Template Engine](https://github.com/devantler/dotnet-template-engine)                           | A simple .NET library to genarate files from .sbn templates                               | Active |
 | [🗝️ .NET Keys](https://github.com/devantler/dotnet-keys)                                                 | A simple .NET library to provide intelligent models for assymetric keys                   | Active |
 | [▶️ .NET CLI Runner](https://github.com/devantler/dotnet-cli-runner)                                     | A simple .NET library to run CLI commands from .NET code                                  | Active |
@@ -252,6 +252,7 @@ Working as a student software developer at GF Forsikring, I was part of the deve
 | [🐶 .NET K9s CLI](https://github.com/devantler/dotnet-k9s-cli)                                           | A simple .NET library that embeds and provides an API for the k9s binary                  | Active |
 | [🔁 .NET Flux CLI](https://github.com/devantler/dotnet-flux-cli)                                         | A simple .NET library that embeds and provides an API for the flux binary                 | Active |
 | [🔎 .NET Kubeconform CLI](https://github.com/devantler/dotnet-kubeconform-cli)                           | A simple .NET library that embeds and provides an API for the kubeconform binary          | Active |
+| [⎈ .NET Helm CLI](https://github.com/devantler/dotnet-helm-cli)                                          | A simple .NET library that embeds and provides an API for the Helm binary                 | WIP    |
 | [🔧 .NET Kubectl CLI](https://github.com/devantler/dotnet-kubectl-cli)                                   | A simple .NET library that embeds and provides an API for the kubectl binary              | Active |
 | [🔐 .NET SOPS CLI](https://github.com/devantler/dotnet-sops-cli)                                         | A simple .NET library that embeds and provides an API for the sops binary                 | Active |
 | [🔑 .NET Age CLI](https://github.com/devantler/dotnet-age-cli)                                           | A simple .NET library that embeds and provides an API for the age and age-keygen binaries | Active |

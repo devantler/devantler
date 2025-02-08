@@ -97,6 +97,10 @@ A simple .NET library that embeds and provides an API for the Kind CLI.
 
 A simple .NET library that embeds and provides an API for the Kubeconform CLI.
 
+## [⎈ .NET Helm CLI](https://github.com/devantler/dotnet-helm-cli)
+
+A simple .NET library that embeds and provides an API for the Helm CLI.
+
 ## [🔧 .NET Kubectl CLI](https://github.com/devantler/dotnet-kubectl-cli)
 
 A simple .NET library that embeds and provides an API for the Kubectl CLI.
