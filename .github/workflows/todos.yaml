@@ -4,7 +4,7 @@ on:
     branches: [main]
 
 jobs:
-  call-todos-workflow:
+  todos:
     uses: devantler-tech/.github/.github/workflows/todos.yaml@main
     secrets:
       APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
