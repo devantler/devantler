@@ -14,7 +14,7 @@
 >
 > **Languages**: Danish, English 🌍
 >
-> **Location**: Kolding, Denmark 📍
+> **Location**: Haderslev, Denmark 📍
 >
 > **Time Zone**: Central European Time (CET) ⏰
 >
