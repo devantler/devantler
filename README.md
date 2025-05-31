@@ -24,7 +24,7 @@
 >
 > **Education**: MSc in Software Engineering 🎓
 >
-> **Occupation**: Platform Engineer 🧑🏻‍💻☸️
+> **Occupation**: Developer Experience Engineer 🧑🏻‍💻☸️
 
 As a software engineer, I have a strong passion for modern software development practices and technologies. I truly believe in the power of open-source software, especially its ability to spark innovation and encourage collaboration. I'm a big fan of the Cloud Native Computing Foundation (CNCF) and appreciate their work in promoting the use of cloud-native technologies. I believe that by working together on important software, we can tackle the challenges we face today and in the future.
 
