@@ -73,9 +73,18 @@ The talk also prestens the roadmap for KSail along with an open invitation to th
 
 Years of experience in software development have given me a solid foundation in modern software development practices and technologies. I have worked on a wide range of projects, from developing and maintaining e-commerce platforms to creating and operating cloud-native solutions. I have a strong passion for learning and sharing knowledge, and I'm always looking for new challenges and opportunities to grow as a software engineer. I have a sharp eye for detail and a strong focus on quality and simplicity in everything I do. I love working with people who share my passion for software development and who are not afraid to challenge the status quo.
 
-### Platform Engineer and Open Source Community Facilitator <span style="float:right">Nov 2024 - Now</span>
+### Developer Experience Engineer <span style="float:right">Jun 2025 - Now</span>
+
+_TV2, Odense_
+
+Coming soon...
+
+### Platform Engineer and Open Source Community Facilitator <span style="float:right">Nov 2024 - Jun 2025</span>
 
 _Energinet, Fredericia - Consultant_
+
+<details>
+  <summary>Learn more...</summary>
 
 Working as a Consultant at Energinet, I'm part of a Platform team in the Infrastructure and Platforms department. As a member of the Platform team my primary focus is on platform engineering. The team's vision provide a Kubernetes platform to create and manage single-tenant and multi-tenant Kubernetes clusters for the organization. The team is very focused on building a good user experience for the platform users, while ensuring that the platform is reliable and scalable.
 
@@ -88,6 +97,8 @@ Working as a Consultant at Energinet, I'm part of a Platform team in the Infrast
 - Facilitating and fostering an open-source community within the organization.
 - Hosting and facilitating meetups, hackathons, and workshops.
 - Promoting modern software development practices like GitHub Flow, DevOps, cloud-native, and open source practices.
+
+</details>
 
 ### Software Engineer and Open Source Community Facilitator <span style="float:right">Aug 2023 - Nov 2024</span>
 
