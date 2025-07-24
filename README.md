@@ -230,11 +230,17 @@ Working as a student software developer at GF Forsikring, I was part of the deve
   <img src="assets/images/badges/cilium-discovery-platform-engineer.png" data-src="assets/images/badges/cilium-discovery-platform-engineer.png" alt="Cilium: Discovery Platform Engineer" width="172" height="172">
 </div>
 
-### Course Certificates
+### Completed Courses
 
 <div align="center">
   <img src="assets/images/courses/kodecloud-kubernetes-for-the-absolute-beginners-course-completion-certificate.png" data-src="assets/images/courses/kodecloud-kubernetes-for-the-absolute-beginners-course-completion-certificate.png" alt="KodeKloud: Kubernetes for the Absolute Beginners" width="420">
   <img src="assets/images/courses/kodecloud-kcna-course-completion-certificate.png" data-src="assets/images/courses/kodecloud-kcna-course-completion-certificate.png" alt="KodeKloud: Kubernetes and Cloud-Native Associate (KCNA)" width="420">
+</div>
+
+## Certificates
+
+<div align="center">
+  <img src="assets/images/certificates/github-actions-certification.png" data-src="assets/images/certificates/github-actions-certification.png" alt="GitHub Actions Certification" width="420">
 </div>
 
 ## [Projects 📽️](https://devantler.com/projects)
