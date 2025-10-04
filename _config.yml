@@ -13,7 +13,6 @@ permalink: /:title
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - flexible_include
   - premonition
 
 paginate: 8
