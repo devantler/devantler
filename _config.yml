@@ -19,6 +19,9 @@ plugins:
 paginate: 8
 paginate_path: "/page/:num"
 
+all_collections:
+  die_on_all_collections_tag_error: false
+
 # Pages Path
 defaults:
   - scope:
