@@ -7,6 +7,5 @@ gem "kramdown-parser-gfm"
 
 group :jekyll_plugins do
   gem 'jekyll_flexible_include'
-  gem "flexible_include"
   gem "premonition"
 end
