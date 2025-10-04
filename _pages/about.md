@@ -84,7 +84,7 @@ Years of experience in software development have given me a solid foundation in 
 
 _TV2, Odense_
 
-Coming soon...
+As a Developer Experience Engineer at TV2, I am responsible for improving the developer experience for the product teams at TV2. This includes working on internal tools and platforms, as well as providing support and guidance to the teams on best practices for software development and operations. I work closely with the teams to understand their needs and challenges, and I strive to find solutions that make their work easier and more efficient. I also collaborate with other enabling teams within the organization to ensure that our tools and platforms are aligned with the overall goals and strategies of TV2.
 
 ### Platform Engineer and Open Source Community Facilitator <span style="float:right">Nov 2024 - Jun 2025</span>
 
