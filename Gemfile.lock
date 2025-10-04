@@ -350,6 +350,7 @@ DEPENDENCIES
   jekyll_flexible_include
   kramdown-parser-gfm
   premonition
+  rugged
 
 BUNDLED WITH
    2.5.14
