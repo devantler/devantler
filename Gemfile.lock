@@ -347,7 +347,8 @@ DEPENDENCIES
   jekyll
   jekyll-paginate
   jekyll-sitemap
-  jekyll_flexible_include (~> 2.0.15)
+  jekyll_flexible_include
+  jekyll_plugin_support
   kramdown-parser-gfm
   premonition
   rugged

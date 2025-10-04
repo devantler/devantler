@@ -8,7 +8,8 @@ gem "github-pages"
 gem "rugged"
 
 group :jekyll_plugins do
-  gem 'jekyll_flexible_include', '~> 2.0.15'
+  gem 'jekyll_plugin_support'
+  gem 'jekyll_flexible_include'
   gem "premonition"
 end
 
