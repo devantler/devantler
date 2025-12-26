@@ -1,23 +1,23 @@
-name: Dependabot auto-merge
+name: CI - Auto-merge
 on: pull_request
 
 permissions:
-  contents: write
   pull-requests: write
+  contents: write
 
 jobs:
-  dependabot:
+  auto-merge:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.user.login == 'dependabot[bot]' && github.repository == 'devantler/devantler'
+    if: ${{ !github.event.pull_request.draft && (github.event.pull_request.user.login == 'dependabot[bot]' || github.event.pull_request.user.login == 'renovate[bot]' || github.event.pull_request.user.login == 'botantler[bot]' || github.event.pull_request.user.login == 'devantler' || github.event.pull_request.user.login == 'Copilot') }}
     steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@08eff52bf64351f401fb50d4972fa95b9f2c2d1b # v2.4.0
+      - name: 📑 Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Enable auto-merge for Dependabot PRs
-        if: contains(steps.metadata.outputs.dependency-names, 'my-dependency') && steps.metadata.outputs.update-type == 'version-update:semver-patch'
-        run: gh pr merge --auto --merge "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          persist-credentials: false
+
+      - name: 🔀 Auto-merge
+        uses: devantler-tech/composite-actions/auto-merge-action@6d18f29330dd5818cf03c8508fb125cc05441fad # v1.9.6
+        with:
+          app_id: ${{ vars.APP_ID }}
+          app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
