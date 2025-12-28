@@ -113,6 +113,6 @@ As a Developer Experience Engineer at TV2, I am responsible for improving the de
 | Template Name                                                        | Description                              | State  |
 | -------------------------------------------------------------------- | ---------------------------------------- | ------ |
 | [#️⃣ .NET Template](https://github.com/devantler-tech/dotnet-template) | A simple .NET template for new projects. | Active |
-| [ :golang: Go Template](https://github.com/devantler-tech/go-template) | A simple Go template for new projects.  | Active |
+| [🦫 Go Template](https://github.com/devantler-tech/go-template) | A simple Go template for new projects.  | Active |
 
 
