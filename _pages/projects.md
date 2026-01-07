@@ -9,57 +9,50 @@ image: "assets/images/work.jpg"
 
 # Active Projects
 
-These are the projects I am currently working on, and I am actively maintaining and developing them. I am always looking for contributors and feedback, so feel free to reach out if you are interested in contributing or have feedback on the projects. You can do so by visiting the projects GitHub page and following the contribution guidelines.
+These are the projects I am currently working on and actively maintaining. I'm always looking for contributors and feedback—feel free to visit each project's GitHub page and follow the contribution guidelines.
 
-## [🛥️🐳 KSail](https://github.com/devantler/ksail) ![.NET](https://img.shields.io/badge/.NET-512BD4.svg?style=for-the-badge&logo=dotnet&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=Docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5.svg?style=for-the-badge&logo=Kubernetes&logoColor=white)
+## [🛥️ KSail](https://github.com/devantler-tech/ksail) ![Go](https://img.shields.io/badge/Go-00ADD8.svg?style=for-the-badge&logo=Go&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=Docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5.svg?style=for-the-badge&logo=Kubernetes&logoColor=white)
 
-```txt
-❯ ksail
-🛥️ 🐳    Welcome to KSail!    🛥️ 🐳
-                                     . . .
-                __/___                 :
-          _____/______|             ___|____     |"\/"|
-  _______/_____\_______\_____     ,'        `.    \  /
-  \               KSail      |    |  ^        \___/  |
-~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^
-Description:
-  KSail is a CLI tool for provisioning GitOps enabled K8s clusters in Docker.
+![KSail](../assets/images/ksail-cli-dark.png)
 
-Usage:
-  ksail [command] [options]
+A CLI tool for provisioning GitOps-enabled Kubernetes clusters. It embeds common Kubernetes tools ([kubectl](https://kubernetes.io/docs/reference/kubectl/), [Helm](https://helm.sh/), [Kind](https://kind.sigs.k8s.io/), [K3d](https://k3d.io/), [Flux](https://fluxcd.io/), [ArgoCD](https://argo-cd.readthedocs.io/)) as Go libraries, requiring only [Docker](https://www.docker.com/) as an external dependency.
 
-Options:
-  --version       Show version information
-  -?, -h, --help  Show help and usage information
+- **Local Development**: Spin up a cluster with GitOps enabled to instantly deploy your [Flux Kustomizations](https://fluxcd.io/flux/components/kustomize/kustomizations/)
+- **CI Pipelines**: Test that your GitOps configurations successfully deploy applications
+- **Multiple Distributions**: Support for [Kind](https://kind.sigs.k8s.io/), [K3d](https://k3d.io/), and [Talos](https://www.talos.dev/) clusters
+- **GitOps Engines**: Support for [Flux](https://fluxcd.io/) and [ArgoCD](https://argo-cd.readthedocs.io/)
+- **Secret Management**: Built-in [SOPS](https://github.com/getsops/sops) integration for encrypted secrets
 
-Commands:
-  init <clusterName>    Initialize a new K8s cluster
-  up <clusterName>      Provision a K8s cluster
-  start <clusterName>   Start a K8s cluster
-  update <clusterName>  Update manifests in an OCI registry
-  stop <clusterName>    Stop a K8s cluster
-  down <clusterName>    Destroy a K8s cluster
-  list                  List running clusters
-  lint <clusterName>    Lint manifest files
-  check <clusterName>   Check the status of the cluster
-  sops <clusterName>    Manage SOPS key
-```
-
-A CLI tool for provisioning GitOps-enabled K8s clusters in Docker. It is especially useful for local development and in CI pipelines.
-
-Locally it allows you to spin up a K8s cluster with GitOps enabled to instantly deploy your Flux Kustomizations. This enables you to develop and test your applications in a K8s environment almost instantly.
-
-In CI pipelines, it allows you to spin up a K8s cluster with GitOps enabled and test that it successfully deploys your applications.
+📖 [Documentation](https://ksail.devantler.tech) • 📝 [Read about the journey from .NET to Go](/2025/05/07/building-ksail-from-shell-to-dotnet-to-go/)
 
 ## [☸️ Platform](https://github.com/devantler-tech/platform) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5.svg?style=for-the-badge&logo=Kubernetes&logoColor=white) ![Flux](https://img.shields.io/badge/Flux-5468FF.svg?style=for-the-badge&logo=Flux&logoColor=white) ![Talos Linux](https://img.shields.io/badge/Talos-FF7300.svg?style=for-the-badge&logo=Talos&logoColor=white)
 
 ![Platform](../assets/images/platform.webp)
 
-A Flux GitOps-based Kubernetes cluster that I run on a Mac Mini and a set of RPIs in my home. It demonstrates a dev-friendly approach to working with Kubernetes.
+A [Flux](https://fluxcd.io/) GitOps-based Kubernetes cluster running on a Mac Mini and Raspberry Pis in my home. It demonstrates a dev-friendly approach to working with Kubernetes using [Talos Linux](https://www.talos.dev/) as the operating system.
 
-I use this cluster to learn and experiment with new technologies and approaches to working with Kubernetes. As such I strive to implement the latest and greatest technologies to keep my skills sharp and up-to-date.
+I use this cluster to learn and experiment with new technologies—striving to implement the latest CNCF projects to keep my skills sharp. I also run self-hosted services for entertainment, personal projects, and to own my own data.
 
-I also plan to use this cluster to run services that I use in my day-to-day life, for entertainment, personal projects, or self-hosted services to cut costs and own my own data.
+**Key Technologies**: [Cilium](https://cilium.io/) (CNI), [Traefik](https://traefik.io/) (Ingress), [cert-manager](https://cert-manager.io/) (TLS), [SOPS](https://github.com/getsops/sops) (Secrets)
+
+## [🔄 Reusable Workflows](https://github.com/devantler-tech/reusable-workflows) ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white)
+
+A collection of [reusable GitHub Actions workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows) that encapsulate common CI/CD patterns. Used across all DevantlerTech projects to ensure consistency and reduce duplication.
+
+- **CI Workflows**: [Go](https://go.dev/) testing/linting, [.NET](https://dotnet.microsoft.com/) testing, documentation linting, GitOps validation
+- **CD Workflows**: Cluster bootstrap, GitOps deploy, [GitHub Pages](https://pages.github.com/) publish, application/library releases
+- **Automation**: Auto-merge for trusted bots, [semantic-release](https://semantic-release.gitbook.io/), TODO scanning, [Kyverno](https://kyverno.io/) policy sync
+
+## [⚡ Actions](https://github.com/devantler-tech/actions) ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white)
+
+A collection of [composite GitHub Actions](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action) that provide small, reusable components for CI/CD workflows.
+
+- **Auto Merge**: Approve and auto-merge PRs from trusted bots/users
+- **Cleanup GHCR**: Clean up old [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) packages
+- **Flux GitOps Deploy**: Push manifests to OCI and deploy using [Flux](https://fluxcd.io/)
+- **Setup KSail**: Install [KSail](https://github.com/devantler-tech/ksail) CLI via [Homebrew](https://brew.sh/)
+- **Install Cilium/Flux**: Install [Cilium](https://cilium.io/) and [Flux](https://fluxcd.io/) in Kubernetes clusters
+- **TODOs**: Create GitHub issues from TODO comments in code
 
 ---
 
