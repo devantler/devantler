@@ -16,8 +16,6 @@ menu-settings:
       url: "/posts"
     - title: "Projects"
       url: "/projects"
-    - title: "libraries"
-      url: "/libraries"
     - title: "Templates"
       url: "/templates"
     - title: "Contact Me"
