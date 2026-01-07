@@ -23,7 +23,7 @@ A CLI tool for provisioning GitOps-enabled Kubernetes clusters. It embeds common
 - **GitOps Engines**: Support for [Flux](https://fluxcd.io/) and [ArgoCD](https://argo-cd.readthedocs.io/)
 - **Secret Management**: Built-in [SOPS](https://github.com/getsops/sops) integration for encrypted secrets
 
-📖 [Documentation](https://ksail.devantler.tech) • 📝 [Read about the journey from .NET to Go](/2025/05/07/building-ksail-from-shell-to-dotnet-to-go/)
+📖 [Documentation](https://ksail.devantler.tech) • 📝 [Read about the journey from .NET to Go](https://devantler.tech/building-ksail-from-shell-to-dotnet-to-go)
 
 ## [☸️ Platform](https://github.com/devantler-tech/platform) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5.svg?style=for-the-badge&logo=Kubernetes&logoColor=white) ![Flux](https://img.shields.io/badge/Flux-5468FF.svg?style=for-the-badge&logo=Flux&logoColor=white) ![Talos Linux](https://img.shields.io/badge/Talos-FF7300.svg?style=for-the-badge&logo=Talos&logoColor=white)
 
