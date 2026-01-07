@@ -64,17 +64,15 @@ These projects are no longer actively maintained, but I still think they are int
 
 # Completed Projects
 
-These are projects that I have completed, and that I am no longer actively maintaining. These are projects that for one or another reason have a stopping point, as they were projects built for a specific purpose that does not require maintenance, or because I have actively abandoned them.
+Projects that have reached their end of life or I no longer actively maintain.
 
 ## [🚚 OCI Artifacts](https://github.com/devantler/oci-artifacts) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5.svg?style=for-the-badge&logo=Kubernetes&logoColor=white) ![Open Container Initiative](https://img.shields.io/badge/Open%20Containers%20Initiative-262261.svg?style=for-the-badge&logo=Open-Containers-Initiative&logoColor=white)
 
 ![OCI Artifacts](../assets/images/oci-artifacts.webp)
 
-A spin-off project from my Homelab project, that simplifies my GitOps deployments by distributing my Kustomize and Flux HelmRelease components through OCI. Doing this allows me to deploy my applications in a single line of code, and still have the flexibility of regular Kustomize and Helm charts. The approach was inspired by shared libraries in regular programming languages, and I felt that Helm charts and Kustomize components required way too much duplication of code when deploying in multiple environments.
+A spin-off from my Homelab project that simplifies GitOps deployments by distributing [Kustomize](https://kustomize.io/) and [Flux HelmRelease](https://fluxcd.io/flux/components/helm/helmreleases/) components via [OCI](https://opencontainers.org/) registries. This approach—inspired by shared libraries in traditional programming—allows deploying applications with a single line of code while maintaining the flexibility of regular [Kustomize](https://kustomize.io/) and [Helm](https://helm.sh/) charts.
 
-Most of the OCI Artifacts are dependent on Flux Kustomizations, and they use Flux Post Build Variables to injects values into the components. This allows me to expose values for the component, that a user can provide when deploying the component in typical settings.
-
-I strive to keep the OCI Artifacts as simple as possible, such that they are very close to the original Kustomize and Helm charts default values. But in many cases, Helm Chart maintainers do not provide default values that enable the component to be deployed out-of-the-box. In those cases, I enforce some post-build variables to be set to ensure that the component can be deployed.
+The OCI Artifacts use [Flux Post Build Variables](https://fluxcd.io/flux/components/kustomize/kustomizations/#post-build-variable-substitution) to inject values into components, exposing configurable settings that users can provide when deploying.
 
 ## [⬡ Data Product](https://github.com/devantler/data-product) ![.NET](https://img.shields.io/badge/.NET-512BD4.svg?style=for-the-badge&logo=dotnet&logoColor=white)
 
@@ -104,9 +102,9 @@ The site is no longer maintained, as it was connected to an Umbraco Heartcore in
 
 # School Projects
 
-These are projects I have completed during my time as a Software Engineering student at the University of Southern Denmark. They are projects that I am proud of, and that I think showcase my skills and dedication to learn and explore new technologies and approaches to solving software engineering problems.
+Projects completed during my Software Engineering studies at the [University of Southern Denmark](https://www.sdu.dk/en). These showcase my dedication to exploring new technologies and approaches to software engineering.
 
-## 🌏 Exploration of state-of-the-art technology, architectures and tools to create future-proof data spaces
+## 🌏 Exploration of State-of-the-Art Technology, Architectures and Tools to Create Future-Proof Data Spaces
 
 ### ⭐️ Graded 12/12 <span style="float:right">10th semester (MSc thesis)</span>
 
