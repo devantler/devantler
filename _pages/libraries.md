@@ -7,108 +7,22 @@ image: "assets/images/work.jpg"
 
 [![github-sponsor-button](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/devantler)
 
-## [☸️ .NET Kubernetes Generator](https://github.com/devantler-tech/dotnet-kubernetes-generator)
+## Deprecated
 
-A simple .NET library for generating Kubernetes resources.
+The .NET libraries previously listed on this page have been **archived** and are no longer actively maintained.
 
-- **Generate native Kubernetes resources**
-- **Generate Flux resources**
-- **Generate K3d resources**
-- **Generate Kustomize resources**
+These libraries were originally created to support [KSail](https://github.com/devantler-tech/ksail) when it was built in .NET. In December 2025, KSail was [rewritten in Go](/2025/05/07/building-ksail-from-shell-to-dotnet-to-go), which allowed the tool to embed Kubernetes tooling as native Go libraries rather than wrapping external binaries.
 
-## [🌐 .NET Kubernetes Provisioner](https://github.com/devantler-tech/dotnet-kubernetes-provisioner)
+The archived libraries included:
 
-A simple .NET library for provisioning Kubernetes clusters and resources.
+- .NET Kubernetes Generator
+- .NET Kubernetes Provisioner
+- .NET Kubernetes Validator
+- .NET Container Engine Provisioner
+- .NET Secret Manager
+- .NET Template Engine
+- .NET Keys
+- .NET CLI Runner
+- Various .NET CLI wrappers (Age, Flux, Helm, K3d, K9s, Kind, Kubeconform, Kubectl, Kustomize, SOPS)
 
-- **Provision K3d clusters**
-- **Provision Kind clusters**
-- **Provision Flux GitOps tooling**
-- **Provision native Kubernetes resources**
-
-## [✅ .NET Kubernetes Validator](https://github.com/devantler-tech/dotnet-kubernetes-validator)
-
-A simple .NET library for client-side and server-side validation of Kubernetes resources.
-
-- **Client-side yaml syntax validation**
-- **Client-side schema validation**
-
-## [🐳 .NET Container Engine Provisioner](https://github.com/devantler-tech/dotnet-container-engine-provisioner)
-
-A simple .NET library for provisioning resources in container engines.
-
-- **Provision Docker resources**
-
-## [🔓 .NET Secret Manager](https://github.com/devantler-tech/dotnet-secret-manager)
-
-A simple .NET library to manage asymmetric keys.
-
-- **Generate new key pairs**
-- **Save key pairs to files**
-- **Load key pairs from files**
-- **Delete key pairs from file**
-- **Supports Age keys locally**
-- **Works with SOPS**
-
-## [📄 .NET Template Engine](https://github.com/devantler-tech/dotnet-template-engine)
-
-A simple .NET library for generating files from templates.
-
-- **Generate files from templates**
-- **Supports Scriban templates**
-- **Extensible**
-
-## [🗝️ .NET Keys](https://github.com/devantler-tech/dotnet-keys)
-
-A simple .NET library to provide intelligent models for assymetric keys.
-
-- **Age Key Model**
-- **Serializable**
-- **Deserializable**
-
-## [▶️ .NET CLI Runner](https://github.com/devantler-tech/dotnet-cli-runner)
-
-A simple .NET library to run CLI commands from .NET code.
-
-- **Run any CLI command**
-- **Fail on error**
-- **Capture output**
-
-## [🔑 .NET Age CLI](https://github.com/devantler-tech/dotnet-age-cli)
-
-A simple .NET library that embeds and provides an API for the age and age-keygen binaries.
-
-## [🔁 .NET Flux CLI](https://github.com/devantler-tech/dotnet-flux-cli)
-
-A simple .NET library that embeds and provides an API for the Flux CLI.
-
-## [⎈ .NET Helm CLI](https://github.com/devantler-tech/dotnet-helm-cli)
-
-A simple .NET library that embeds and provides an API for the Helm CLI.
-
-## [③ .NET K3d CLI](https://github.com/devantler-tech/dotnet-k3d-cli)
-
-A simple .NET library that embeds and provides an API for the K3d CLI.
-
-## [🐶 .NET K9s CLI](https://github.com/devantler-tech/dotnet-k9s-cli)
-
-A simple .NET library that embeds and provides an API for the K9s CLI.
-
-## [⚗️ .NET Kind CLI](https://github.com/devantler-tech/dotnet-kind-cli)
-
-A simple .NET library that embeds and provides an API for the Kind CLI.
-
-## [🔎 .NET Kubeconform CLI](https://github.com/devantler-tech/dotnet-kubeconform-cli)
-
-A simple .NET library that embeds and provides an API for the Kubeconform CLI.
-
-## [🔧 .NET Kubectl CLI](https://github.com/devantler-tech/dotnet-kubectl-cli)
-
-A simple .NET library that embeds and provides an API for the Kubectl CLI.
-
-## [Ⓚ .NET Kustomize CLI](https://github.com/devantler-tech/dotnet-kustomize-cli)
-
-A simple .NET library that embeds and provides an API for the Kustomize CLI.
-
-## [🔐 .NET SOPS CLI](https://github.com/devantler-tech/dotnet-sops-cli)
-
-A simple .NET library that embeds and provides an API for the SOPS CLI.
+If you're looking for Kubernetes tooling, check out [KSail](https://github.com/devantler-tech/ksail) — it bundles all of this functionality into a single Go binary.

@@ -2,7 +2,7 @@
 layout: page
 title: "About Me"
 permalink: /about
-image: 'assets/images/ocean.jpg'
+image: "assets/images/ocean.jpg"
 ---
 
 # Hi there 👋🏻☸️
@@ -84,7 +84,7 @@ Years of experience in software development have given me a solid foundation in 
 
 _TV2, Odense_
 
-As a Developer Experience Engineer at TV2, I am responsible for improving the developer experience for the product teams at TV2. This includes working on internal tools and platforms, as well as providing support and guidance to the teams on best practices for software development and operations. I work closely with the teams to understand their needs and challenges, and I strive to find solutions that make their work easier and more efficient. I also collaborate with other enabling teams within the organization to ensure that our tools and platforms are aligned with the overall goals and strategies of TV2.
+As a Senior Engineer in Developer Tooling at TV2, I am responsible for improving the developer experience for the product teams at TV2. This includes working on internal tools and platforms, as well as providing support and guidance to the teams on best practices for software development and operations. I work closely with the teams to understand their needs and challenges, and I strive to find solutions that make their work easier and more efficient. I also collaborate with other enabling teams within the organization to ensure that our tools and platforms are aligned with the overall goals and strategies of TV2.
 
 ### Platform Engineer and Open Source Community Facilitator <span style="float:right">Nov 2024 - Jun 2025</span>
 
@@ -252,15 +252,15 @@ Working as a student software developer at GF Forsikring, I was part of the deve
 
 ## [Projects 📽️](https://devantler.com/projects)
 
-| Project Name                                             | Description                                                                                                  | State  |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------ |
-| [🛥️🐳 KSail](https://github.com/devantler-tech/ksail)      | An all-in-one SDK for spinning up clusters and managing workloads—right from your own machine..              | Active |
+| Project Name                                              | Description                                                                                                  | State  |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------ |
+| [🛥️🐳 KSail](https://github.com/devantler-tech/ksail)     | An all-in-one SDK for spinning up clusters and managing workloads—right from your own machine..              | Active |
 | [☸️ Platform](https://github.com/devantler-tech/platform) | DevantlerTech Platform - including deployment artifacts for running the platform in CI/CD and in Talos Omni. | Active |
 
 ## [Libraries 📦](https://devantler.com/libraries)
 
-| Library Name                                                                                                 | Description                                                                               | State  |
-| ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | ------ |
+| Library Name                                                                                                  | Description                                                                               | State  |
+| ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------ |
 | [☸️ .NET Kubernetes Generator](https://github.com/devantler-tech/dotnet-kubernetes-generator)                 | A simple .NET library for generating Kubernetes resources.                                | Active |
 | [✅ .NET Kubernetes Validator](https://github.com/devantler-tech/dotnet-kubernetes-validator)                 | A simple .NET library for running client-side and server-side validations on Kubernetes   | Active |
 | [🌐 .NET Kubernetes Provisioner](https://github.com/devantler-tech/dotnet-kubernetes-provisioner)             | A simple .NET library for provisioning Kubernetes clusters and resources.                 | Active |
@@ -271,16 +271,16 @@ Working as a student software developer at GF Forsikring, I was part of the deve
 | [⚗️ .NET Kind CLI](https://github.com/devantler-tech/dotnet-kind-cli)                                         | A simple .NET library that embeds and provides an API for the kind binary                 | Active |
 | [🐶 .NET K9s CLI](https://github.com/devantler-tech/dotnet-k9s-cli)                                           | A simple .NET library that embeds and provides an API for the k9s binary                  | Active |
 | [🔁 .NET Flux CLI](https://github.com/devantler-tech/dotnet-flux-cli)                                         | A simple .NET library that embeds and provides an API for the flux binary                 | Active |
-| [⎈ .NET Helm CLI](https://github.com/devantler-tech/dotnet-helm-cli)                                         | A simple .NET library that embeds and provides an API for the Helm binary                 | Active |
+| [⎈ .NET Helm CLI](https://github.com/devantler-tech/dotnet-helm-cli)                                          | A simple .NET library that embeds and provides an API for the Helm binary                 | Active |
 | [🔎 .NET Kubeconform CLI](https://github.com/devantler-tech/dotnet-kubeconform-cli)                           | A simple .NET library that embeds and provides an API for the kubeconform binary          | Active |
 | [🔧 .NET Kubectl CLI](https://github.com/devantler-tech/dotnet-kubectl-cli)                                   | A simple .NET library that embeds and provides an API for the kubectl binary              | Active |
 | [🔐 .NET SOPS CLI](https://github.com/devantler-tech/dotnet-sops-cli)                                         | A simple .NET library that embeds and provides an API for the sops binary                 | Active |
 | [🔑 .NET Age CLI](https://github.com/devantler-tech/dotnet-age-cli)                                           | A simple .NET library that embeds and provides an API for the age and age-keygen binaries | Active |
-| [③ .NET K3d CLI](https://github.com/devantler-tech/dotnet-k3d-cli)                                           | A simple .NET library that embeds and provides an API for the k3d binary                  | Active |
-| [Ⓚ .NET Kustomize CLI](https://github.com/devantler-tech/dotnet-kustomize-cli)                               | A simple .NET library that embeds and provides an API for the kustomize binary            | Active |
+| [③ .NET K3d CLI](https://github.com/devantler-tech/dotnet-k3d-cli)                                            | A simple .NET library that embeds and provides an API for the k3d binary                  | Active |
+| [Ⓚ .NET Kustomize CLI](https://github.com/devantler-tech/dotnet-kustomize-cli)                                | A simple .NET library that embeds and provides an API for the kustomize binary            | Active |
 
 ## [Templates 📁](https://devantler.com/templates)
 
-| Template Name                                                        | Description                              | State  |
-| -------------------------------------------------------------------- | ---------------------------------------- | ------ |
+| Template Name                                                         | Description                              | State  |
+| --------------------------------------------------------------------- | ---------------------------------------- | ------ |
 | [#️⃣ .NET Template](https://github.com/devantler-tech/dotnet-template) | A simple .NET template for new projects. | Active |
