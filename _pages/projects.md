@@ -78,25 +78,27 @@ The OCI Artifacts use [Flux Post Build Variables](https://fluxcd.io/flux/compone
 
 ![Data Product](../assets/images/data-product.webp)
 
-My master thesis project, where I built a data product inspired by the Data Mesh architectural pattern, and the Data Product concept from the book "Data Mesh: Delivering Data-Driven Value at Scale" by Zhamak Dehghani. The project is built in .NET and uses a .NETs Source Generators to generate the data product based on its schema, and a YAML configuration file for the data product. As such, users were able to define their data product in a YAML file, and reference their schema to generate a data product with support for REST, GrapQL, Streaming, Observability, and more out-of-the-box.
+My master thesis project: a data product inspired by the [Data Mesh](https://www.datamesh-architecture.com/) architectural pattern and [Zhamak Dehghani's book](https://www.oreilly.com/library/view/data-mesh/9781492092384/). Built in [.NET](https://dotnet.microsoft.com/) using [Source Generators](https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview) to create data products from schema definitions and YAML configuration.
 
-The project was build as a containerized application, such that it can be deployed to various container orchestrators, and it was built according to many of the best practices I have learnt to appreciate from my interest in CNCF projects.
+Users could define their data product in YAML and reference a schema to generate REST, GraphQL, streaming, observability, and more—all out of the box. The project was containerized for deployment to various orchestrators and follows [CNCF](https://www.cncf.io/) best practices.
 
-If you are interested in reading my thesis, you can find it [here](../assets/pdfs/thesis.pdf).
+📄 [Read the thesis](../assets/pdfs/thesis.pdf)
 
 ## [✍🏻 Pandoc Plus](https://github.com/devantler/pandoc-plus) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white)
 
 ![Pandoc Plus](../assets/images/pandoc-plus.webp)
 
-A docker image that packages pandoc with LaTeX, PlantUML, and lua filters, to create LaTeX-styled scientific papers with Markdown. The image is built to include all the necessary batteries to create high-quality scientific papers, supporting the most common features of LaTeX, with a simple Markdown syntax. Pandoc Plus also supports beautiful transformations of all Markdown syntax, such that transpiles to good LaTeX practices, and results in a beautiful PDF. It being a docker image, also makes it trivial to use in CI pipelines, to ensure your scientific papers compile correctly, and that you can easily share your work with others. This essentially allows you to write your scientific papers in accordance with best practices in software development, saving you lots of time and effort.
+A Docker image that packages [Pandoc](https://pandoc.org/) with [LaTeX](https://www.latex-project.org/), [PlantUML](https://plantuml.com/), and Lua filters to create LaTeX-styled scientific papers from Markdown. The image includes all necessary tools to produce high-quality papers with beautiful transformations of Markdown syntax to LaTeX best practices.
 
-Pandoc Plus was developed as a side project to my master thesis, which was also a compiled by Pandoc Plus. If you are interested in seeing the output of Pandoc Plus, and how the projects source code is structured, you can find my Master Thesis [here](../assets/pdfs/thesis.pdf).
+Being a Docker image makes it trivial to use in CI pipelines—enabling you to write scientific papers following software development best practices.
+
+📄 [Example output: My thesis](../assets/pdfs/thesis.pdf)
 
 ## [🤖 Star Wars Site](https://github.com/devantler/star-wars-site) ![.NET](https://img.shields.io/badge/.NET-512BD4.svg?style=for-the-badge&logo=dotnet&logoColor=white) ![Umbraco](https://img.shields.io/badge/Umbraco-3544B1.svg?style=for-the-badge&logo=Umbraco&logoColor=white) ![Nomad](https://img.shields.io/badge/Nomad-00CA8E.svg?style=for-the-badge&logo=Nomad&logoColor=white)
 
-A Star Wars site I built as part of a hirement process at Umbraco, where I was tasked with building a site that showcased my skills in .NET and Umbraco. The site is built as a Blazor WebAssembly application, that fetches data from Umbraco Heartcore, and displays it in a Star Wars themes site. The site is built to be responsive and to be as fast as possible, and it uses a lot of the latest and greatest technologies in .NET and Umbraco. To make the project a bit more interesting I decided to deploy the site to a Nomad cluster, as this was a technology I was interested in learning more about at the time. Nomad was a great container orchestrator, but I found it to be a bit too underappreciated in the industry, hence I now use Kubernetes for most of my projects, as it is more widely adopted.
+A Star Wars-themed site built during an [Umbraco](https://umbraco.com/) hiring process to showcase [.NET](https://dotnet.microsoft.com/) and Umbraco skills. Built as a [Blazor WebAssembly](https://learn.microsoft.com/en-us/aspnet/core/blazor/) app fetching data from [Umbraco Heartcore](https://umbraco.com/products/umbraco-heartcore/), deployed to a [HashiCorp Nomad](https://www.nomadproject.io/) cluster for learning purposes.
 
-The site is no longer maintained, as it was connected to an Umbraco Heartcore instance that was only available during the hirement process. But the source code is still available!
+The site is no longer running (the Heartcore instance was temporary), but the source code remains available!
 
 ---
 
@@ -110,9 +112,11 @@ Projects completed during my Software Engineering studies at the [University of 
 
 ![Data Space as a Data Mesh](../assets/images/data-space-as-a-data-mesh.png)
 
-An exploration of whether a data space can be implemented as a data mesh, focusing on challenges and potential benefits for collaboration among actors in the Danish energy sector. The study employs constructivism and the constructive research approach as its methodology, utilizing the grounded theory method to conduct fieldwork and create theories and hypotheses from the results. The research encompasses topics such as the climate, the Danish energy sector, data spaces, and data mesh, emphasizing a prototype of a data mesh’s central component, a data product. The prototype demonstrates that the data mesh approach can be successfully applied to data spaces, enabling better separation of domains within sectors and enabling discoverability, observability, and governance. However, it lacks the features and the maturity to provide a production-ready and complete solution. Overall, this thesis contributes to the ongoing discussion on future-proof data spaces and provides insights into implementing a data space as a data mesh to achieve that goal.
+An exploration of whether a [data space](https://internationaldataspaces.org/) can be implemented as a [data mesh](https://www.datamesh-architecture.com/), focusing on challenges and benefits for collaboration in the Danish energy sector. The study uses constructivism and the constructive research approach, employing grounded theory for fieldwork.
 
-If you are interested in reading my thesis, you can find it [here](../assets/pdfs/thesis.pdf).
+The research culminated in a prototype of a data mesh's central component—a data product—demonstrating that the data mesh approach can be successfully applied to data spaces for better domain separation, discoverability, observability, and governance.
+
+📄 [Read the thesis](../assets/pdfs/thesis.pdf)
 
 ## 📊 Power Price Assistant
 
@@ -120,7 +124,7 @@ If you are interested in reading my thesis, you can find it [here](../assets/pdf
 
 ![Power Price Assistant](../assets/images/power-price-assistant.png)
 
-A web app that simulates a system that can advise on what electricity provider to choose based on the user's electricity consumption patterns, and priorities.
+A web app simulating a system that advises on electricity provider selection based on consumption patterns and user priorities.
 
 ## 🏗️ Simulated Assembly Line
 
@@ -130,7 +134,7 @@ A web app that simulates a system that can advise on what electricity provider t
   <source data-src="../assets/videos/simulated-assembly-line.mp4"  type="video/mp4">
 </video>
 
-A simulated assembly line consisting of a self-constructed crane, a rotating disk, and a web camera. It was programmed by the group's own Domain-Specific Language (DSL), which generated a client that could execute the program. The client utilized MQTT to communicate with the embedded system.
+A simulated assembly line with a self-constructed crane, rotating disk, and web camera. Programmed using our own Domain-Specific Language (DSL) that generated a client for execution. The client used [MQTT](https://mqtt.org/) to communicate with the embedded system.
 
 ## 🌊 EcoBeach
 
@@ -138,9 +142,9 @@ A simulated assembly line consisting of a self-constructed crane, a rotating dis
 
 ![EcoBeach](../assets/images/ecobeach.png)
 
-A big data system that scraped satellite imagery of beach geo-locations from the Sentinel-2 satellite and processed them to determine how shorelines have changed over time. An Android app was also built to visualize the data.
+A big data system that scraped satellite imagery from the [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) satellite and processed them to analyze shoreline changes over time. Included an Android app for data visualization.
 
-You can read the report [here](../assets/pdfs/ecobeach.pdf)
+📄 [Read the report](../assets/pdfs/ecobeach.pdf)
 
 ## ⬣ HexUML
 
@@ -148,4 +152,4 @@ You can read the report [here](../assets/pdfs/ecobeach.pdf)
 
 ![HexUML](../assets/images/hexuml.png)
 
-A generic transpiler framework capable of translating one text source into another, e.g., from Java to C#. The framework was used to generate AnyLogic models for a web-based application (EcosystemMapGenerator), that I built for SDU during my hire as a student programmer at Maersk Mc-Kinney Moller Institute from February 2021 to November 2021.
+A generic transpiler framework for translating between text sources (e.g., Java to C#). The framework was used to generate [AnyLogic](https://www.anylogic.com/) models for a web application (EcosystemMapGenerator) I built for [SDU](https://www.sdu.dk/) during my work as a student programmer at the [Maersk Mc-Kinney Moller Institute](https://www.sdu.dk/en/om_sdu/institutter_centre/mmmi_maersk_telecom) (February 2021 – November 2021).
