@@ -1,38 +1,40 @@
 #-------------------------------
 # Site Settings
 title: Nikolai Emil | Devantler
-logo: 'assets/images/author.png'
+logo: "assets/images/author.png"
 description: Nikolai Emil | Devantler - My personal blog and portfolio.
 
 #-------------------------------
 # Navigation Settings
 menu-settings:
   menu-items:
-    - title: 'Home'
-      url: '/'
-    - title: 'About Me'
-      url: '/about'
-    - title: 'Projects'
-      url: '/projects'
-    - title: 'libraries'
-      url: '/libraries'
-    - title: 'Templates'
-      url: '/templates'
-    - title: 'Contact Me'
-      url: '/contact'
+    - title: "Home"
+      url: "/"
+    - title: "About Me"
+      url: "/about"
+    - title: "Posts"
+      url: "/posts"
+    - title: "Projects"
+      url: "/projects"
+    - title: "libraries"
+      url: "/libraries"
+    - title: "Templates"
+      url: "/templates"
+    - title: "Contact Me"
+      url: "/contact"
 
 #-------------------------------
 # Author Settings
 author:
   name: Nikolai Emil Damm
-  avatar: 'assets/images/author.png'
+  avatar: "assets/images/author.png"
 
 #-------------------------------
 # Hero Settings
 hero:
   title: Nikolai Emil | Devantler
   description: I am an ambitious software engineer with an agile mindset, and the desire to overcome innovative challenges. For that open source is my toolbox 🧰
-  image: 'assets/images/matrix.png'
+  image: "assets/images/matrix.png"
 
 #-------------------------------
 # Contact Settings
@@ -43,8 +45,12 @@ contact:
 #-------------------------------
 # Footer section
 social:
-- {icon: "fa-brands fa-linkedin", name: "LinkedIn", link: "https://www.linkedin.com/in/nikolai-emil-damm-14a786150/"}
-- {icon: "fa-brands fa-github", name: "Github", link: "https://github.com/devantler"}
+  - {
+      icon: "fa-brands fa-linkedin",
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/nikolai-emil-damm-14a786150/",
+    }
+  - { icon: "fa-brands fa-github", name: "Github", link: "https://github.com/devantler" }
 
 #-------------------------------
 # Comment Section (Disqus)
@@ -53,6 +59,7 @@ disqus-identifier: devantler # Add your shortname for Disqus Comment. For exampl
 #-------------------------------
 # Google Analytics
 google-analytics: G-MK59Q89KYW # Add your identifier. For example UA-99631805-1.
+
 
 #-------------------------------
 # Newsletter
