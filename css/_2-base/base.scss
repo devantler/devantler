@@ -91,17 +91,17 @@ blockquote {
   position: relative;
   padding: 34px 20px 34px 64px;
   margin-bottom: 0;
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 700;
   color: $white;
 
   &:before {
     content: '\201C';
     position: absolute;
-    top: 0.59em;
-    left: -0.08em;
-    font-size: 3.5em;
+    top: 0.26em;
+    left: 0.3em;
+    font-size: 3em;
     color: $brand-color;
   }
 
