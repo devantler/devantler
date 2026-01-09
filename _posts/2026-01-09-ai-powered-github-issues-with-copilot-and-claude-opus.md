@@ -198,12 +198,54 @@ The user story format forces clarity about _who_ benefits, _what_ they need, and
 
 For continuous improvement initiatives, I use the [Toyota Kata framework](https://en.wikipedia.org/wiki/Toyota_Kata). Unlike bugs and features, katas focus on human processes rather than code — things like team communication, workflow bottlenecks, or development practices.
 
-The template requires four sections:
+```yaml
+name: 🥋 Improvement Kata
+description: Use the Improvement Kata framework for structured problem-solving.
+title: "[kata]: "
+type: Kata
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the current situation and why it is problematic.
+      value: |
+        Current situation:
+        - ...
 
-- **Problem** — Current situation and why it's problematic
-- **Definition of Awesome** — The ideal state we're working toward
-- **Next Target Condition** — Measurable goals with a timeframe
-- **Actions** — Concrete experiments to run
+        Why this is problematic:
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition-of-awesome
+    attributes:
+      label: Definition of Awesome
+      description: How would we like it to be? Describe the ideal state.
+    validations:
+      required: true
+
+  - type: textarea
+    id: next-target-condition
+    attributes:
+      label: Next Target Condition
+      description: X weeks from now, what has changed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actions
+    attributes:
+      label: Actions
+      description: List of actions to take toward the target condition.
+      value: |
+        - [ ] **Action 1:** ...
+        - [ ] **Action 2:** ...
+        - [ ] **Action 3:** ...
+    validations:
+      required: true
+```
 
 This template is particularly powerful with AI assistance. Opus 4.5 can help structure observations about team dynamics, identify process bottlenecks, and propose actionable improvement experiments — turning vague frustrations into measurable improvement initiatives.
 
