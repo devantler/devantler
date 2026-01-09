@@ -336,14 +336,14 @@ At TV 2, where I work, this approach has had an even bigger impact.
 
 |                   | Traditional   | AI-Assisted               |
 | ----------------- | ------------- | ------------------------- |
-| **Investigation** | 1-2 hours     | 5 min (context selection) |
-| **Analysis**      | 1 hour        | 5 min (prompting)         |
-| **Writing**       | 1-2 hours     | 10 min (AI generation)    |
+| **Investigation** | 1-2 hours     | 1 min (context selection) |
+| **Analysis**      | 1 hour        | 1 min (prompting)         |
+| **Writing**       | 1-2 hours     | 3 min (AI generation)     |
 | **Structuring**   | 30-60 min     | — (template handles it)   |
-| **Review**        | 30 min        | 15-20 min                 |
-| **Total**         | **4-6 hours** | **~40 minutes**           |
+| **Review**        | 30 min        | 25 min                    |
+| **Total**         | **4-6 hours** | **~30 minutes**           |
 
-**Time saved on investigation**: Instead of spending hours digging through unfamiliar code, I can generate a comprehensive issue in 5 minutes.
+**Time saved on investigation**: Instead of spending hours digging through unfamiliar code, I can generate a comprehensive issue in under 5 minutes.
 
 **Better refinement sessions**: When issues arrive at refinement already following our template and containing accurate technical details, the team can focus on alignment, estimation and planning rather than clarification.
 
