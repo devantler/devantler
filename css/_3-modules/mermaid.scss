@@ -11,6 +11,32 @@
     max-width: 100%;
     height: auto;
   }
+
+  // Force white text on all elements for better contrast
+  text,
+  tspan,
+  .nodeLabel,
+  .label,
+  .edgeLabel,
+  .cluster-label,
+  foreignObject,
+  foreignObject div,
+  foreignObject span,
+  foreignObject p {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+  }
+
+  // Mindmap specific text fixes
+  .mindmap-node text,
+  .mindmap-node tspan,
+  .section text,
+  .section tspan,
+  g.mindmap-node text,
+  g.mindmap-node foreignObject div {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+  }
 }
 
 /* Fix for mermaid text visibility in dark theme */

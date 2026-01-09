@@ -3,8 +3,34 @@
 
   mermaid.initialize({
     startOnLoad: false,
-    theme: "dark",
+    theme: "base",
     securityLevel: "loose",
+    themeVariables: {
+      // General
+      background: "#1a1a2e",
+      primaryColor: "#4a6fa5",
+      primaryTextColor: "#ffffff",
+      primaryBorderColor: "#6a8fc5",
+      secondaryColor: "#4a8a6a",
+      secondaryTextColor: "#ffffff",
+      secondaryBorderColor: "#6aaa8a",
+      tertiaryColor: "#6a5a8a",
+      tertiaryTextColor: "#ffffff",
+      tertiaryBorderColor: "#8a7aaa",
+      lineColor: "#888888",
+      textColor: "#ffffff",
+
+      // Mindmap specific - ensure all node levels have white text
+      nodeBkg: "#4a6fa5",
+      nodeTextColor: "#ffffff",
+
+      // Flowchart
+      mainBkg: "#4a6fa5",
+      nodeBorder: "#6a8fc5",
+      clusterBkg: "#2a2a4a",
+      titleColor: "#ffffff",
+      edgeLabelBackground: "transparent",
+    },
     flowchart: {
       useMaxWidth: true,
       htmlLabels: true,

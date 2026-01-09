@@ -334,25 +334,14 @@ For [KSail](https://github.com/devantler-tech/ksail), my Kubernetes SDK for loca
 
 At TV 2, where I work, this approach has had an even bigger impact.
 
-```mermaid
-gantt
-    title Time Comparison: Traditional vs AI-Assisted Issue Creation
-    dateFormat X
-    axisFormat %M min
-
-    section Traditional
-    Investigation       :0, 20
-    Analysis            :20, 30
-    Writing             :30, 45
-    Structuring         :45, 55
-    Review              :55, 60
-
-    section AI-Assisted
-    Context Selection   :0, 1
-    Prompting           :1, 2
-    AI Generation       :2, 4
-    Review & Refine     :4, 10
-```
+|                   | Traditional   | AI-Assisted               |
+| ----------------- | ------------- | ------------------------- |
+| **Investigation** | 1-2 hours     | 5 min (context selection) |
+| **Analysis**      | 1 hour        | 5 min (prompting)         |
+| **Writing**       | 1-2 hours     | 10 min (AI generation)    |
+| **Structuring**   | 30-60 min     | — (template handles it)   |
+| **Review**        | 30 min        | 15-20 min                 |
+| **Total**         | **4-6 hours** | **~40 minutes**           |
 
 **Time saved on investigation**: Instead of spending hours digging through unfamiliar code, I can generate a comprehensive issue in 5 minutes.
 
