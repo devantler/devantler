@@ -425,7 +425,7 @@ If you're spending too much time writing issues, or if your team's refinement se
 
 The future of software development isn't AI replacing developers — it's AI handling the tedious parts so developers can focus on what matters. I am personally ecstatic about how this workflow has improved my productivity and the quality of my work. I hope it helps you too!
 
-If you have further questions or want to discuss this approach, feel free to comment below or send me a message or [contact me](https://devantler.tech/contact/).
+If you have further questions or want to discuss this approach, feel free to comment below or [contact me](https://devantler.tech/contact/).
 
 ---
 
