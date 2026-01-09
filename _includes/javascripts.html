@@ -1,12 +1,13 @@
 <script src="{{ '/js/scripts.js' | relative_url }}"></script>
 <script src="{{ '/js/common.js' | relative_url }}"></script>
+{% include mermaid.html %}
 <script>
   SimpleJekyllSearch({
     searchInput: document.getElementById("js-search-input"),
     resultsContainer: document.getElementById("js-results-container"),
     json: "{{ '/search.json' | relative_url }}",
-    searchResultTemplate: '{article}',
-    noResultsText: '<li class="no-results"><h3>No results found</h3></li>'
+    searchResultTemplate: "{article}",
+    noResultsText: '<li class="no-results"><h3>No results found</h3></li>',
   });
   var base_url = "",
     pagination_next_url = base_url + "{{ '/page2' | relative_url }}",

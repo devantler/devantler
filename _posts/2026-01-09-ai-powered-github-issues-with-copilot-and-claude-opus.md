@@ -228,17 +228,19 @@ That's it — one sentence describing what I wanted, plus a reference to existin
 
 Copilot analyzed the codebase, identified all the integration points, and generated [this issue](https://github.com/devantler-tech/ksail/issues/1614):
 
-> **[feature]: Add `--policy-engine` flag to install Kyverno or Gatekeeper**
->
-> **User Story**
->
-> **As a** KSail user,
-> **I want** to install a policy engine (Kyverno or Gatekeeper) when creating a cluster,
-> **So that** I can enforce policies on my workloads from the start without manual post-provisioning steps.
->
-> **Background**
->
-> Policy engines are essential for enforcing security, compliance, and best practices in Kubernetes clusters. Adding first-class support for policy engines follows the same pattern as existing addons (cert-manager, metrics-server, CNI, CSI, GitOps engines).
+```md
+**[feature]: Add `--policy-engine` flag to install Kyverno or Gatekeeper**
+
+**User Story**
+
+**As a** KSail user,
+**I want** to install a policy engine (Kyverno or Gatekeeper) when creating a cluster,
+**So that** I can enforce policies on my workloads from the start without manual post-provisioning steps.
+
+**Background**
+
+Policy engines are essential for enforcing security, compliance, and best practices in Kubernetes clusters. Adding first-class support for policy engines follows the same pattern as existing addons (cert-manager, metrics-server, CNI, CSI, GitOps engines).
+```
 
 The AI didn't stop there. It analyzed the existing addon implementations and produced detailed implementation requirements:
 
