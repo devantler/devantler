@@ -209,4 +209,6 @@ The project is open source under the Apache 2.0 license. You can find:
 
 If you're working with Kubernetes locally, give KSail a try. And if you've been through similar rewrites with your own projects, I'd love to hear your stories.
 
+---
+
 _This blog post was written with the assistance of GitHub Copilot and Claude Opus 4.5. The content reflects my genuine experiences and journey; the AI helped structure and articulate it._
