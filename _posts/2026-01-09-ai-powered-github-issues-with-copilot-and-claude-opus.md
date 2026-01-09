@@ -7,7 +7,7 @@ image: "assets/images/issues.png"
 
 Creating good GitHub issues is an underrated skill. A well-written issue saves hours of back-and-forth during refinement, reduces misunderstandings, and helps developers focus on solving problems rather than deciphering vague descriptions. But writing those issues takes time — time spent investigating code, formulating problems clearly, and ensuring the description meets team expectations.
 
-I've found a workflow that dramatically reduces this overhead: using GitHub Copilot with Claude Opus 4.5 to analyze codebases and generate structured, impactful issues.
+I've found a workflow that dramatically reduces this overhead: using [GitHub Copilot](https://docs.github.com/en/copilot) with [Claude Opus 4.5](https://www.anthropic.com/news/claude-opus-4-5) to analyze codebases and generate structured, impactful issues.
 
 - [The Problem with Traditional Issue Creation](#the-problem-with-traditional-issue-creation)
 - [My AI-Assisted Workflow](#my-ai-assisted-workflow)
@@ -63,7 +63,7 @@ Here's how it works:
 
 ### Step 1: Select the Context
 
-I attach the relevant folders, repositories, or files in VS Code Chat Agent mode. This might be:
+I attach the relevant folders, repositories, or files in [VS Code Chat Agent mode](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode). This might be:
 
 - A specific service or module where I've noticed a problem
 - Multiple related files that need coordinated changes
@@ -114,7 +114,7 @@ Opus 4.5 generates a complete issue that typically requires minimal editing. The
 
 ## Structured Templates Are Key
 
-The secret sauce isn't just the AI — it's combining AI with well-designed issue templates. I use YAML-based GitHub issue templates stored in `.github/ISSUE_TEMPLATE/` that enforce structure and guide both humans and AI to provide the right information.
+The secret sauce isn't just the AI — it's combining AI with well-designed issue templates. I use [YAML-based GitHub issue forms](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms) stored in `.github/ISSUE_TEMPLATE/` that enforce structure and guide both humans and AI to provide the right information.
 
 ### Bug Reports
 
@@ -332,7 +332,7 @@ For [KSail](https://github.com/devantler-tech/ksail), my Kubernetes SDK for loca
 
 ### Professional Work (TV 2)
 
-At TV 2, where I work, this approach has had an even bigger impact.
+At [TV 2](https://tv2.dk), where I work, this approach has had an even bigger impact.
 
 |                   | Traditional    | AI-Assisted               |
 | ----------------- | -------------- | ------------------------- |
@@ -343,11 +343,11 @@ At TV 2, where I work, this approach has had an even bigger impact.
 | **Review**        | 30 min         | 25 min                    |
 | **Total**         | **6-12 hours** | **~30 minutes**           |
 
-**Time saved on investigation**: Instead of spending hours digging through unfamiliar code, I can generate a comprehensive issue in under 5 minutes.
+**Time saved on investigation**: Instead of spending hours digging through unfamiliar code, I can generate a comprehensive issue in under 30 minutes.
 
 **Better refinement sessions**: When issues arrive at refinement already following our template and containing accurate technical details, the team can focus on alignment, estimation and planning rather than clarification.
 
-**Senior engineer quality**: Opus 4.5 is remarkably capable at writing issues that meet senior software engineers' expectations. The descriptions are technical enough to be useful, clear enough to be actionable, and structured enough to fit our workflow.
+**Senior-level quality**: Opus 4.5 is remarkably capable at writing issues that meet senior software engineers' expectations. The descriptions are technical enough to be useful, clear enough to be actionable, and structured enough to fit our workflow.
 
 **Consistency**: Every issue follows the same format, making it easier for team members to find the information they need.
 
@@ -365,7 +365,7 @@ This workflow isn't magic. There are situations where AI-assisted issue creation
 
 **Novel codebases**: The AI is remarkably good at pattern recognition. In well-structured codebases with consistent patterns (like KSail's addon system), it excels. In chaotic legacy codebases with no clear patterns, results vary.
 
-For these situations, I fall back to traditional issue creation — but I still use my templates to ensure structure.
+For these situations, I fall back to traditional issue creation, or a mix of both — but I always use issue templates to ensure structure.
 
 ## Tips for Getting the Best Results
 
@@ -393,7 +393,7 @@ For large features, start with a high-level issue, then generate sub-issues for 
 
 ## Conclusion
 
-GitHub Copilot with Claude Opus 4.5 has transformed how I create issues. What used to take hours now takes 5-10 minutes, and the quality is often higher than what I'd produce manually.
+GitHub Copilot with Claude Opus 4.5 has transformed how I create issues. What used to take 6-12 hours now takes around 30 minutes, and the quality is often higher than what I'd produce manually.
 
 ```mermaid
 mindmap
@@ -421,7 +421,7 @@ The combination of AI analysis and structured templates creates a workflow that'
 
 If you're spending too much time writing issues, or if your team's refinement sessions are slowed down by unclear issue descriptions, give this workflow a try. The upfront investment in good issue templates pays dividends when combined with AI-powered generation, but also if you write issues manually.
 
-**Want to try this yourself?** Fork my [issue templates](https://github.com/devantler-tech/.github/tree/main/.github/ISSUE_TEMPLATE) and adapt them to your team's conventions. The combination of structured templates and AI-powered generation might just change how you work.
+**Want to try this yourself?** Use my [issue templates](https://github.com/devantler-tech/.github/tree/main/.github/ISSUE_TEMPLATE) and adapt them to your team's conventions. The combination of structured templates and AI-powered generation might just change how you work.
 
 The future of software development isn't AI replacing developers — it's AI handling the tedious parts so developers can focus on what matters. I am personally ecstatic about how this workflow has improved my productivity and the quality of my work. I hope it helps you too!
 
