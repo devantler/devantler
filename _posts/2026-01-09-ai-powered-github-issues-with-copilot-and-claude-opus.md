@@ -44,7 +44,7 @@ Before adopting this workflow, creating a proper issue typically involved:
 4. **Structuring**: Ensuring the issue follows team conventions
 5. **Review**: Double-checking that nothing important was missed
 
-For a complex feature or bug, this process could easily take 1-2 hours — and that's assuming you're already familiar with the codebase.
+For a complex feature or bug, this process could easily take multiple hours — and that's assuming you're already familiar with the codebase.
 
 ## My AI-Assisted Workflow
 
@@ -320,7 +320,7 @@ The generated issue required minimal editing — just some polish to the accepta
 Implement https://github.com/devantler-tech/ksail/issues/1614
 ```
 
-The issue was so well-structured that Copilot could follow it as a specification. Total time from idea to merged PR: about 2 hours of active work, and about 8 hours in total. Imaging how much work you could do if you parallelized this across multiple issues!
+The issue was so well-structured that Copilot could follow it as a specification. Total time from idea to merged PR: about 2 hours of active work, and about 4 hours in total (with the time AI was working). Imaging how much work you could do if you parallelized this across multiple issues!
 
 ## Real-World Impact
 
@@ -334,14 +334,14 @@ For [KSail](https://github.com/devantler-tech/ksail), my Kubernetes SDK for loca
 
 At TV 2, where I work, this approach has had an even bigger impact.
 
-|                   | Traditional   | AI-Assisted               |
-| ----------------- | ------------- | ------------------------- |
-| **Investigation** | 1-2 hours     | 1 min (context selection) |
-| **Analysis**      | 1 hour        | 1 min (prompting)         |
-| **Writing**       | 1-2 hours     | 3 min (AI generation)     |
-| **Structuring**   | 30-60 min     | — (template handles it)   |
-| **Review**        | 30 min        | 25 min                    |
-| **Total**         | **4-6 hours** | **~30 minutes**           |
+|                   | Traditional    | AI-Assisted               |
+| ----------------- | -------------- | ------------------------- |
+| **Investigation** | 1-2 hours      | 1 min (context selection) |
+| **Analysis**      | 1 hour         | 1 min (prompting)         |
+| **Writing**       | 1-2 hours      | 3 min (AI generation)     |
+| **Structuring**   | 2-6 hours      | — (template handles it)   |
+| **Review**        | 30 min         | 25 min                    |
+| **Total**         | **6-12 hours** | **~30 minutes**           |
 
 **Time saved on investigation**: Instead of spending hours digging through unfamiliar code, I can generate a comprehensive issue in under 5 minutes.
 
@@ -399,7 +399,7 @@ GitHub Copilot with Claude Opus 4.5 has transformed how I create issues. What us
 mindmap
   root((AI-Powered Issues))
     Fast
-      5-10 min vs 30-60 min
+      30 min vs 6-12 hours
       No manual investigation
     Consistent
       Same template every time
