@@ -55,8 +55,8 @@ flowchart LR
     A["📁 Select Context"] --> B["💬 Prompt with Intent"]
     B --> C["📋 Reference Templates"]
     C --> D["🤖 AI Analysis"]
-    D --> E["✅ Review & Refine"]
-    E --> F["🎫 Create Issue"]
+    D --> E["🎫 Create Issue"]
+    E --> F["✅ Review & Refine"]
 ```
 
 Here's how it works:
