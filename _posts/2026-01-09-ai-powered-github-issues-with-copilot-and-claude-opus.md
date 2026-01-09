@@ -337,11 +337,11 @@ At [TV 2](https://tv2.dk), where I work, this approach has had an even bigger im
 |                   | Traditional    | AI-Assisted               |
 | ----------------- | -------------- | ------------------------- |
 | **Investigation** | 1-2 hours      | 1 min (context selection) |
-| **Analysis**      | 1 hour         | 1 min (prompting)         |
-| **Writing**       | 1-2 hours      | 3 min (AI generation)     |
-| **Structuring**   | 2-6 hours      | — (template handles it)   |
+| **Analysis**      | 1-2 hour       | 1 min (prompting)         |
+| **Writing**       | 0.5-1 hour     | 3 min (AI generation)     |
+| **Structuring**   | 10 min         | — (template handles it)   |
 | **Review**        | 30 min         | 25 min                    |
-| **Total**         | **6-12 hours** | **~30 minutes**           |
+| **Total**         | **3-6 hours**  | **~30 minutes**           |
 
 **Time saved on investigation**: Instead of spending hours digging through unfamiliar code, I can generate a comprehensive issue in under 30 minutes.
 
@@ -393,13 +393,13 @@ For large features, start with a high-level issue, then generate sub-issues for 
 
 ## Conclusion
 
-GitHub Copilot with Claude Opus 4.5 has transformed how I create issues. What used to take 6-12 hours now takes around 30 minutes, and the quality is often higher than what I'd produce manually.
+GitHub Copilot with Claude Opus 4.5 has transformed how I create issues. What used to take 3-6 hours now takes around 30 minutes, and the quality is often higher than what I'd produce manually.
 
 ```mermaid
 mindmap
   root((AI-Powered Issues))
     Fast
-      30 min vs 6-12 hours
+      30 min vs 3-6 hours
       No manual investigation
     Consistent
       Same template every time
