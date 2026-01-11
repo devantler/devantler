@@ -17,6 +17,10 @@ Building a developer tool is rarely a straight path. [KSail](https://github.com/
   - [Why Go?](#why-go)
   - [The New Architecture](#the-new-architecture)
 - [Lessons Learned](#lessons-learned)
+  - [1. Choose the Right Language for the Ecosystem](#1-choose-the-right-language-for-the-ecosystem)
+  - [2. Wrapping vs. Embedding](#2-wrapping-vs-embedding)
+  - [3. Start Simple, Then Structure](#3-start-simple-then-structure)
+  - [4. Don't Fear the Rewrite](#4-dont-fear-the-rewrite)
 - [Where KSail Is Today](#where-ksail-is-today)
 - [What's Next](#whats-next)
 
@@ -198,8 +202,8 @@ ksail cluster connect  # Opens K9s
 KSail is actively developed with a focus on:
 
 - **Cloud providers**: Hetzner Cloud support is in progress
-- **More distributions**: EKS support is planned
 - **Enhanced GitOps workflows**: Better reconciliation and debugging tools
+- **Enhanced SOPS integration**: More secret management features for e.g. GitOps.
 
 The project is open source under the Apache 2.0 license. You can find:
 
