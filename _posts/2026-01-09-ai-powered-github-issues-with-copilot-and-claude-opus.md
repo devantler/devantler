@@ -334,14 +334,14 @@ For [KSail](https://github.com/devantler-tech/ksail), my Kubernetes SDK for loca
 
 At [TV 2](https://tv2.dk), where I work, this approach has had an even bigger impact.
 
-|                   | Traditional    | AI-Assisted               |
-| ----------------- | -------------- | ------------------------- |
-| **Investigation** | 1-2 hours      | 1 min (context selection) |
-| **Analysis**      | 1-2 hour       | 1 min (prompting)         |
-| **Writing**       | 0.5-1 hour     | 3 min (AI generation)     |
-| **Structuring**   | 10 min         | — (template handles it)   |
-| **Review**        | 30 min         | 25 min                    |
-| **Total**         | **3-6 hours**  | **~30 minutes**           |
+|                   | Traditional   | AI-Assisted               |
+| ----------------- | ------------- | ------------------------- |
+| **Investigation** | 1-2 hours     | 1 min (context selection) |
+| **Analysis**      | 1-2 hour      | 1 min (prompting)         |
+| **Writing**       | 0.5-1 hour    | 3 min (AI generation)     |
+| **Structuring**   | 10 min        | — (template handles it)   |
+| **Review**        | 30 min        | 25 min                    |
+| **Total**         | **3-6 hours** | **~30 minutes**           |
 
 **Time saved on investigation**: Instead of spending hours digging through unfamiliar code, I can generate a comprehensive issue in under 30 minutes.
 
@@ -425,7 +425,7 @@ If you're spending too much time writing issues, or if your team's refinement se
 
 The future of software development isn't AI replacing developers — it's AI handling the tedious parts so developers can focus on what matters. I am personally ecstatic about how this workflow has improved my productivity and the quality of my work. I hope it helps you too!
 
-If you have further questions or want to discuss this approach, feel free to comment below or [contact me](https://devantler.tech/contact/).
+If you have further questions or want to discuss this approach, feel free to comment below or [contact me](/contact/).
 
 ---
 
