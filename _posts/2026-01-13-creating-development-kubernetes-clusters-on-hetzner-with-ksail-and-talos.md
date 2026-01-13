@@ -20,6 +20,7 @@ Setting up Kubernetes development environments doesn't have to be expensive or c
 - [Cleaning Up](#cleaning-up)
 - [Cost Considerations](#cost-considerations)
 - [What's Next](#whats-next)
+  - [Planned: Production-Grade Features](#planned-production-grade-features)
   - [Feedback Welcome](#feedback-welcome)
   - [A Note on Cloud Provider Support](#a-note-on-cloud-provider-support)
 
@@ -205,6 +206,15 @@ This is remarkably affordable for a Kubernetes development cluster. Remember wit
 ## What's Next
 
 Explore the [KSail documentation](https://ksail.devantler.tech) for advanced topics including secret management with SOPS, mirror registries, and GitOps workflows.
+
+### Planned: Production-Grade Features
+
+Integration with [Hetzner Cloud Controller Manager](https://github.com/hetznercloud/hcloud-cloud-controller-manager) and [Hetzner Cloud CSI Driver](https://github.com/hetznercloud/csi-driver) is planned for future releases. This will enable:
+
+- **Cloud Load Balancers**: Automatic provisioning of Hetzner Load Balancers for Kubernetes Services of type `LoadBalancer`
+- **Persistent Storage**: Dynamic provisioning of Hetzner Cloud Volumes for PersistentVolumeClaims
+
+These integrations will make KSail clusters on Hetzner production-grade, suitable for running real workloads beyond development.
 
 ### Feedback Welcome
 
