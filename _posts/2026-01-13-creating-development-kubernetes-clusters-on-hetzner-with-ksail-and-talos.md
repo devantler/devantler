@@ -17,6 +17,8 @@ Setting up Kubernetes development environments doesn't have to be expensive or c
 - [Step 7: Create the Cluster](#step-7-create-the-cluster)
 - [Step 8: Working with Your Cluster](#step-8-working-with-your-cluster)
 - [Step 9: Deploying Workloads](#step-9-deploying-workloads)
+  - [Option A: Direct kubectl Workflow](#option-a-direct-kubectl-workflow)
+  - [Option B: GitOps with External Registry](#option-b-gitops-with-external-registry)
 - [Cleaning Up](#cleaning-up)
 - [Cost Considerations](#cost-considerations)
 - [What's Next](#whats-next)
@@ -105,7 +107,7 @@ ksail --version
 
 ## Step 6: Scaffold Your Cluster Project
 
-KSail's `init` command scaffolds a complete project structure. For a Talos cluster on Hetzner with Cilium CNI:
+KSail's `init` command scaffolds a complete project structure. For a basic Talos cluster on Hetzner with Cilium CNI:
 
 ```bash
 mkdir my-cluster && cd my-cluster
@@ -113,6 +115,19 @@ ksail cluster init --distribution Talos --provider Hetzner --cni Cilium
 ```
 
 This creates `ksail.yaml` (cluster configuration), `talos/` (Talos configs), and `k8s/` (your Kubernetes manifests).
+
+**For GitOps workflows**, add a GitOps engine and external registry:
+
+```bash
+ksail cluster init \
+  --distribution Talos \
+  --provider Hetzner \
+  --cni Cilium \
+  --gitops-engine Flux \
+  --local-registry '${GITHUB_USER}:${GITHUB_TOKEN}@ghcr.io/your-org/your-cluster'
+```
+
+This configures Flux to sync manifests from GitHub Container Registry. See [Step 9: Deploying Workloads](#step-9-deploying-workloads) for the full GitOps workflow.
 
 For all available flags and configuration options, see the [KSail documentation](https://ksail.devantler.tech):
 
@@ -160,13 +175,71 @@ For the full command reference, see [Cluster Commands](https://ksail.devantler.t
 
 ## Step 9: Deploying Workloads
 
-KSail wraps kubectl and GitOps operations under the `workload` command:
+KSail wraps kubectl and GitOps operations under the `workload` command. For cloud clusters like Hetzner, you have two main options for deploying workloads.
+
+### Option A: Direct kubectl Workflow
+
+The simplest approach applies manifests directly to the cluster:
 
 ```bash
-ksail workload apply -k ./k8s    # Apply manifests (kubectl workflow)
-ksail workload push              # Push to GitOps source
-ksail workload reconcile         # Trigger GitOps reconciliation
+ksail workload apply -k ./k8s    # Apply Kustomize manifests
+ksail workload get pods          # Check pod status
+ksail workload logs deployment/my-app  # View logs
 ```
+
+This works well for quick iterations but doesn't provide GitOps benefits like drift detection and automatic reconciliation.
+
+### Option B: GitOps with External Registry
+
+For cloud clusters without a local Docker registry, you can use an external OCI registry like GitHub Container Registry (ghcr.io). This enables full GitOps workflows with Flux or ArgoCD.
+
+**Step 1: Create a GitHub Personal Access Token**
+
+1. Go to GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
+2. Create a token with `write:packages` and `read:packages` scopes
+3. Export the credentials:
+
+```bash
+export GITHUB_USER="your-username"
+export GITHUB_TOKEN="ghp_your-token-here"
+```
+
+**Step 2: Initialize with GitOps and External Registry**
+
+When scaffolding your cluster, specify the GitOps engine and external registry:
+
+```bash
+ksail cluster init \
+  --distribution Talos \
+  --provider Hetzner \
+  --cni Cilium \
+  --gitops-engine Flux \
+  --local-registry '${GITHUB_USER}:${GITHUB_TOKEN}@ghcr.io/your-org/your-cluster'
+```
+
+The `--local-registry` flag accepts the format `[user:pass@]host[:port][/path]`. Environment variable placeholders like `${GITHUB_TOKEN}` are expanded at runtime, keeping credentials out of your config files.
+
+**Step 3: Create the Cluster**
+
+```bash
+ksail cluster create
+```
+
+This installs Flux and configures it to sync from your external registry.
+
+**Step 4: Push and Reconcile Workloads**
+
+```bash
+# Package manifests and push to registry
+ksail workload push
+
+# Trigger GitOps reconciliation
+ksail workload reconcile
+```
+
+The `push` command packages your `k8s/` directory as an OCI artifact and pushes it to ghcr.io. Flux then pulls and applies the manifests automatically.
+
+> **Tip**: You can also set the registry via environment variable: `KSAIL_REGISTRY='ghcr.io/org/repo' ksail workload push`
 
 For the full workload command reference, see [Workload Commands](https://ksail.devantler.tech/configuration/cli-flags/workload/).
 
