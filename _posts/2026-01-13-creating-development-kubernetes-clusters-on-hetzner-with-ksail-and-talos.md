@@ -131,9 +131,9 @@ This configures Flux to sync manifests from GitHub Container Registry. See [Step
 
 For all available flags and configuration options, see the [KSail documentation](https://ksail.devantler.tech):
 
-- [CLI flags reference](https://ksail.devantler.tech/configuration/cli-flags/cluster/cluster-init/) — All `cluster init` options
-- [ksail.yaml reference](https://ksail.devantler.tech/configuration/ksail-yaml/) — Configuration file schema
-- [Features overview](https://ksail.devantler.tech/features/) — CNI, CSI, GitOps, and more
+- [CLI flags reference](https://ksail.devantler.tech/configuration/cli-flags/cluster/cluster-init.html) — All `cluster init` options
+- [ksail.yaml reference](https://ksail.devantler.tech/configuration/declarative-configuration.html) — Configuration file schema
+- [Features overview](https://ksail.devantler.tech/features.html) — CNI, CSI, GitOps, and more
 
 ## Step 7: Create the Cluster
 
@@ -171,7 +171,7 @@ ksail cluster start     # Start a stopped cluster
 
 Your kubeconfig is automatically configured, so standard `kubectl` commands work too.
 
-For the full command reference, see [Cluster Commands](https://ksail.devantler.tech/configuration/cli-flags/cluster/).
+For the full command reference, see [Cluster Commands](https://ksail.devantler.tech/configuration/cli-flags/cluster/cluster-root.html).
 
 ## Step 9: Deploying Workloads
 
@@ -241,7 +241,7 @@ The `push` command packages your `k8s/` directory as an OCI artifact and pushes 
 
 > **Tip**: You can also set the registry via environment variable: `KSAIL_REGISTRY='ghcr.io/org/repo' ksail workload push`
 
-For the full workload command reference, see [Workload Commands](https://ksail.devantler.tech/configuration/cli-flags/workload/).
+For the full workload command reference, see [Workload Commands](https://ksail.devantler.tech/configuration/cli-flags/workload/workload-root.html).
 
 ## Cleaning Up
 
