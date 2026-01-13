@@ -9,8 +9,6 @@ image: "assets/images/work.jpg"
 
 A collection of my blog posts on software development, Kubernetes, DevOps, and more.
 
----
-
 {% for post in site.posts %}
 
 ## [{{ post.title }}]({{ post.url | relative_url }})
