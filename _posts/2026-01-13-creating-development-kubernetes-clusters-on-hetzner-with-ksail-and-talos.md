@@ -201,7 +201,7 @@ For a more robust setup (3 control planes + 2 workers) using `cx23` servers:
 | Private network        | Free              |
 | **Total**              | **~€18.70/month** |
 
-This is remarkably affordable for a Kubernetes development cluster. Remember with KSail you can also stop or delete clusters when not in use to avoid unnecessary costs.
+This is remarkably affordable for a Kubernetes development cluster.
 
 ## What's Next
 
