@@ -49,6 +49,7 @@ social:
       link: "https://www.linkedin.com/in/nikolai-emil-damm-14a786150/",
     }
   - { icon: "fa-brands fa-github", name: "Github", link: "https://github.com/devantler" }
+  - { icon: "fa-solid fa-rss", name: "RSS", link: "/feed.xml" }
 
 #-------------------------------
 # Comment Section (Disqus)
