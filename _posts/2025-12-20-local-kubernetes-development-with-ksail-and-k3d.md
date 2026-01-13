@@ -16,7 +16,6 @@ K3s is Rancher's lightweight Kubernetes distribution, and when combined with [K3
 - [Step 5: Deploying Workloads](#step-5-deploying-workloads)
 - [Cleaning Up](#cleaning-up)
 - [What's Next](#whats-next)
-  - [Feedback Welcome](#feedback-welcome)
 
 ## Why K3d + KSail?
 

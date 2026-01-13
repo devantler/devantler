@@ -1,0 +1,221 @@
+---
+layout: post
+title: "Creating Development Kubernetes Clusters on Hetzner with KSail and Talos"
+description: A step-by-step guide to creating Talos Linux Kubernetes development clusters on Hetzner Cloud using KSail.
+image: "assets/images/talos-x-hetzner.png"
+---
+
+Setting up Kubernetes development environments doesn't have to be expensive or complicated. With [Hetzner Cloud](https://www.hetzner.com/cloud/)'s affordable pricing, [Talos Linux](https://www.talos.dev/)'s security-focused immutable OS, and [KSail](https://github.com/devantler-tech/ksail)'s unified tooling, you can have a development cluster running in minutes. This post walks through the complete setup.
+
+- [Why Hetzner + Talos + KSail?](#why-hetzner--talos--ksail)
+- [Step 1: Create a Hetzner Account](#step-1-create-a-hetzner-account)
+- [Step 2: Create a Hetzner Project](#step-2-create-a-hetzner-project)
+- [Step 3: Generate an API Token](#step-3-generate-an-api-token)
+- [Step 4: Export the API Token](#step-4-export-the-api-token)
+- [Step 5: Install KSail](#step-5-install-ksail)
+- [Step 6: Scaffold Your Cluster Project](#step-6-scaffold-your-cluster-project)
+- [Step 7: Create the Cluster](#step-7-create-the-cluster)
+- [Step 8: Working with Your Cluster](#step-8-working-with-your-cluster)
+- [Step 9: Deploying Workloads](#step-9-deploying-workloads)
+- [Cleaning Up](#cleaning-up)
+- [Cost Considerations](#cost-considerations)
+- [What's Next](#whats-next)
+  - [Feedback Welcome](#feedback-welcome)
+  - [A Note on Cloud Provider Support](#a-note-on-cloud-provider-support)
+
+## Why Hetzner + Talos + KSail?
+
+**Hetzner Cloud** offers some of the most affordable cloud VPS servers in the industry. A capable `cx23` server (2 vCPU, 4GB RAM) costs around €3.74/month — significantly cheaper than equivalent offerings from AWS, GCP, or Azure.
+
+**Talos Linux** is a minimal, immutable operating system designed specifically for Kubernetes. There's no SSH, no shell, no package manager — just the Talos API and Kubernetes. This dramatically reduces the attack surface and eliminates configuration drift.
+
+**KSail** brings it all together with a single binary that handles cluster provisioning, GitOps setup, and workload management. Instead of juggling `hcloud`, `talosctl`, `kubectl`, `helm`, and `flux` commands, you use one consistent interface.
+
+## Step 1: Create a Hetzner Account
+
+If you don't already have a Hetzner account:
+
+1. Go to [Hetzner Cloud Console](https://console.hetzner.cloud/)
+2. Click "Register" and complete the signup process
+3. Verify your email and complete any required identity verification
+
+Hetzner has documentation for getting started: [Account Getting Started Guide](https://docs.hetzner.com/general/billing-and-account-management/account-getting-started/).
+
+## Step 2: Create a Hetzner Project
+
+Projects in Hetzner Cloud are organizational units that contain your resources (servers, networks, load balancers, etc.). Each project has its own API tokens and billing.
+
+1. Log into the [Hetzner Cloud Console](https://console.hetzner.cloud/)
+2. Click "New Project" in the sidebar
+3. Name your project (e.g., "kubernetes-dev" or "my-homelab")
+4. Click "Create"
+
+## Step 3: Generate an API Token
+
+KSail needs an API token to provision and manage Hetzner Cloud resources.
+
+1. In your project, go to **Security** → **API Tokens**
+2. Click **Generate API Token**
+3. Name the token (e.g., "ksail-cluster-management")
+4. Select **Read & Write** permissions — KSail needs to create and delete servers
+5. Click **Generate API Token**
+6. **Copy the token immediately** — you won't be able to see it again!
+
+For more details, see Hetzner's [Generating API Token Guide](https://docs.hetzner.com/cloud/api/getting-started/generating-api-token/).
+
+## Step 4: Export the API Token
+
+KSail reads the Hetzner API token from the `HCLOUD_TOKEN` environment variable. Add it to your shell configuration:
+
+```bash
+# For the current session
+export HCLOUD_TOKEN="your-api-token-here"
+
+# To persist across sessions, add to your shell config
+echo 'export HCLOUD_TOKEN="your-api-token-here"' >> ~/.zshrc  # or ~/.bashrc
+source ~/.zshrc
+```
+
+You can verify the token is set:
+
+```bash
+echo $HCLOUD_TOKEN | head -c 10  # Should show first 10 characters
+```
+
+## Step 5: Install KSail
+
+KSail is distributed as a single binary. The easiest installation method is via Homebrew:
+
+```bash
+brew install --cask devantler-tech/tap/ksail
+```
+
+Alternatively, if you have Go installed:
+
+```bash
+go install github.com/devantler-tech/ksail/v5@latest
+```
+
+Verify the installation:
+
+```bash
+ksail --version
+```
+
+## Step 6: Scaffold Your Cluster Project
+
+KSail's `init` command scaffolds a complete project structure. For a Talos cluster on Hetzner with Cilium CNI:
+
+```bash
+mkdir my-cluster && cd my-cluster
+ksail cluster init --distribution Talos --provider Hetzner --cni Cilium
+```
+
+This creates `ksail.yaml` (cluster configuration), `talos/` (Talos configs), and `k8s/` (your Kubernetes manifests).
+
+For all available flags and configuration options, see the [KSail documentation](https://ksail.devantler.tech):
+
+- [CLI flags reference](https://ksail.devantler.tech/configuration/cli-flags/cluster/cluster-init/) — All `cluster init` options
+- [ksail.yaml reference](https://ksail.devantler.tech/configuration/ksail-yaml/) — Configuration file schema
+- [Features overview](https://ksail.devantler.tech/features/) — CNI, CSI, GitOps, and more
+
+## Step 7: Create the Cluster
+
+With your configuration ready, create the cluster:
+
+```bash
+ksail cluster create
+```
+
+This command:
+
+1. Creates servers in Hetzner Cloud
+2. Configures the private network
+3. Bootstraps Talos Linux on each node
+4. Initializes the Kubernetes cluster
+5. Installs your selected CNI, CSI, and other components
+6. Configures your local kubeconfig
+7. Configures your local talosconfig
+
+The process takes 3-5 minutes depending on your cluster size.
+
+You can watch the progress as KSail outputs status updates for each stage.
+
+## Step 8: Working with Your Cluster
+
+Once your cluster is running, KSail provides commands for common operations:
+
+```bash
+ksail cluster info      # Show cluster status
+ksail cluster list      # List all KSail-managed clusters
+ksail cluster connect   # Open K9s for interactive management
+ksail cluster stop      # Stop the cluster
+ksail cluster start     # Start a stopped cluster
+```
+
+Your kubeconfig is automatically configured, so standard `kubectl` commands work too.
+
+For the full command reference, see [Cluster Commands](https://ksail.devantler.tech/configuration/cli-flags/cluster/).
+
+## Step 9: Deploying Workloads
+
+KSail wraps kubectl and GitOps operations under the `workload` command:
+
+```bash
+ksail workload apply -k ./k8s    # Apply manifests (kubectl workflow)
+ksail workload push              # Push to GitOps source
+ksail workload reconcile         # Trigger GitOps reconciliation
+```
+
+For the full workload command reference, see [Workload Commands](https://ksail.devantler.tech/configuration/cli-flags/workload/).
+
+## Cleaning Up
+
+When you're done with the cluster:
+
+```bash
+ksail cluster delete
+```
+
+This removes:
+
+- All Hetzner Cloud servers
+- The private network
+- Placement groups
+- Local kubeconfig entries
+- Local talosconfig entries
+
+> **Warning**: This is destructive and cannot be undone. All data in the cluster will be lost.
+
+## Cost Considerations
+
+A minimal development setup (1 control plane) using a `cx23` server costs under €4/month.
+
+For a more robust setup (3 control planes + 2 workers) using `cx23` servers:
+
+| Component              | Monthly Cost      |
+| ---------------------- | ----------------- |
+| 3x cx23 control planes | €11.22            |
+| 2x cx23 workers        | €7.48             |
+| Private network        | Free              |
+| **Total**              | **~€18.70/month** |
+
+This is remarkably affordable for a Kubernetes development cluster. Remember with KSail you can also stop or delete clusters when not in use to avoid unnecessary costs.
+
+## What's Next
+
+Explore the [KSail documentation](https://ksail.devantler.tech) for advanced topics including secret management with SOPS, mirror registries, and GitOps workflows.
+
+### Feedback Welcome
+
+This is the first iteration of Hetzner Cloud support in KSail. If you encounter bugs or find missing features, please [open an issue on GitHub](https://github.com/devantler-tech/ksail/issues). Your feedback helps improve the tool for everyone.
+
+### A Note on Cloud Provider Support
+
+Testing and maintaining cloud provider integrations comes with ongoing infrastructure costs. Hetzner is supported because I use it for my own homelab and want to manage it via KSail. Additional cloud providers (AWS, GCP, Azure, etc.) will not be added without sponsorship to cover testing costs.
+
+If you'd like to see your preferred cloud provider supported, consider [sponsoring the project on GitHub](https://github.com/sponsors/devantler).
+
+---
+
+_This blog post was written with the assistance of GitHub Copilot and Claude Opus 4.5. The content is based on real-world experience running Talos development clusters on Hetzner Cloud._
