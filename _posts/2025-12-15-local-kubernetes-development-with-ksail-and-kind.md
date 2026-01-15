@@ -74,9 +74,9 @@ This creates `ksail.yaml` (cluster configuration), `kind.yaml` (Kind config), an
 
 For all available flags and configuration options, see the [KSail documentation](https://ksail.devantler.tech):
 
-- [CLI flags reference](https://ksail.devantler.tech/configuration/cli-flags/cluster/cluster-init/) — All `cluster init` options
-- [ksail.yaml reference](https://ksail.devantler.tech/configuration/ksail-yaml/) — Configuration file schema
-- [Features overview](https://ksail.devantler.tech/features/) — CNI, CSI, GitOps, and more
+- [CLI flags reference](https://ksail.devantler.tech/configuration/cli-flags/cluster/cluster-init) — All `cluster init` options
+- [ksail.yaml reference](https://ksail.devantler.tech/configuration/declarative-configuration) — Configuration file schema
+- [Features overview](https://ksail.devantler.tech/features) — CNI, CSI, GitOps, and more
 
 ## Step 3: Create the Cluster
 
@@ -109,7 +109,7 @@ ksail cluster start     # Start a stopped cluster
 
 Your kubeconfig is automatically configured, so standard `kubectl` commands work too.
 
-For the full command reference, see [Cluster Commands](https://ksail.devantler.tech/configuration/cli-flags/cluster/).
+For the full command reference, see [Cluster Commands](https://ksail.devantler.tech/configuration/cli-flags/cluster/cluster-root).
 
 ## Step 5: Deploying Workloads
 
@@ -121,7 +121,7 @@ ksail workload push              # Push to GitOps source
 ksail workload reconcile         # Trigger GitOps reconciliation
 ```
 
-For the full workload command reference, see [Workload Commands](https://ksail.devantler.tech/configuration/cli-flags/workload/).
+For the full workload command reference, see [Workload Commands](https://ksail.devantler.tech/configuration/cli-flags/workload/workload-root).
 
 ## Cleaning Up
 
