@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Creating Development Kubernetes Clusters on Hetzner with KSail and Talos"
-description: A step-by-step guide to creating Talos Linux Kubernetes development clusters on Hetzner Cloud using KSail.
+title: "Creating Kubernetes Clusters on Hetzner with KSail and Talos"
+description: A step-by-step guide to creating Talos Linux Kubernetes clusters on Hetzner Cloud using KSail.
 image: "assets/images/talos-x-hetzner.png"
 ---
 
-Setting up Kubernetes development environments doesn't have to be expensive or complicated. With [Hetzner Cloud](https://www.hetzner.com/cloud/)'s affordable pricing, [Talos Linux](https://www.talos.dev/)'s security-focused immutable OS, and [KSail](https://github.com/devantler-tech/ksail)'s unified tooling, you can have a development cluster running in minutes. This post walks through the complete setup.
+Setting up Kubernetes environments doesn't have to be expensive or complicated. With [Hetzner Cloud](https://www.hetzner.com/cloud/)'s affordable pricing, [Talos Linux](https://www.talos.dev/)'s security-focused immutable OS, and [KSail](https://github.com/devantler-tech/ksail)'s unified tooling, you can have a cluster running in minutes. This post walks through the complete setup.
 
 - [Why Hetzner + Talos + KSail?](#why-hetzner--talos--ksail)
 - [Step 1: Create a Hetzner Account](#step-1-create-a-hetzner-account)
@@ -131,9 +131,9 @@ This configures Flux to sync manifests from GitHub Container Registry. See [Step
 
 For all available flags and configuration options, see the [KSail documentation](https://ksail.devantler.tech):
 
-- [CLI flags reference](https://ksail.devantler.tech/configuration/cli-flags/cluster/cluster-init.html) — All `cluster init` options
-- [ksail.yaml reference](https://ksail.devantler.tech/configuration/declarative-configuration.html) — Configuration file schema
-- [Features overview](https://ksail.devantler.tech/features.html) — CNI, CSI, GitOps, and more
+- [CLI flags reference](https://ksail.devantler.tech/configuration/cli-flags/cluster/cluster-init) — All `cluster init` options
+- [ksail.yaml reference](https://ksail.devantler.tech/configuration/declarative-configuration) — Configuration file schema
+- [Features overview](https://ksail.devantler.tech/features) — CNI, CSI, GitOps, and more
 
 ## Step 7: Create the Cluster
 
@@ -171,7 +171,7 @@ ksail cluster start     # Start a stopped cluster
 
 Your kubeconfig is automatically configured, so standard `kubectl` commands work too.
 
-For the full command reference, see [Cluster Commands](https://ksail.devantler.tech/configuration/cli-flags/cluster/cluster-root.html).
+For the full command reference, see [Cluster Commands](https://ksail.devantler.tech/configuration/cli-flags/cluster/cluster-root).
 
 ## Step 9: Deploying Workloads
 
@@ -241,7 +241,7 @@ The `push` command packages your `k8s/` directory as an OCI artifact and pushes 
 
 > **Tip**: You can also set the registry via environment variable: `KSAIL_REGISTRY='ghcr.io/org/repo' ksail workload push`
 
-For the full workload command reference, see [Workload Commands](https://ksail.devantler.tech/configuration/cli-flags/workload/workload-root.html).
+For the full workload command reference, see [Workload Commands](https://ksail.devantler.tech/configuration/cli-flags/workload/workload-root).
 
 ## Cleaning Up
 
