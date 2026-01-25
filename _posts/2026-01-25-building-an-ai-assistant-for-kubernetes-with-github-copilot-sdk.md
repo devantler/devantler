@@ -13,8 +13,6 @@ The chat feature is the next step: **removing cognitive overhead**. Instead of m
 
 This post covers the technical journey of building `ksail chat` using the [GitHub Copilot SDK for Go](https://github.com/github/copilot-sdk-go), [Bubbletea](https://github.com/charmbracelet/bubbletea) TUI framework, and [glamour](https://github.com/charmbracelet/glamour) for markdown rendering.
 
-![ksail-copilot-chat-2](/assets/images/ksail-copilot-chat-2.png)
-
 - [See It in Action](#see-it-in-action)
 - [Motivation](#motivation)
 - [The Tech Stack](#the-tech-stack)
@@ -98,6 +96,8 @@ AI responses often include markdown formatting. [glamour](https://github.com/cha
 The SDK, TUI, and renderer handle *how* the interface works. The harder question: how do we make the AI actually *useful*? An LLM that just talks is nice, but we need it to execute real commands and stay within security boundaries.
 
 ### Auto-Generated Tools from Cobra Commands
+
+![ksail-copilot-chat-2](/assets/images/ksail-copilot-chat-2.png)
 
 KSail has 92+ CLI commands, all built with [Cobra](https://github.com/spf13/cobra). This consistency is what makes auto-generation possible — every command has the same structure: name, description, flags with types and defaults.
 
