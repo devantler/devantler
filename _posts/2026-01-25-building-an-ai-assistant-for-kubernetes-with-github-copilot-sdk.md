@@ -23,6 +23,7 @@ This post covers the technical journey of building this feature using the [GitHu
   - [Auto-Generated Tools from Cobra Commands](#auto-generated-tools-from-cobra-commands)
   - [Embedded Documentation Context](#embedded-documentation-context)
   - [Security Boundaries for File Operations](#security-boundaries-for-file-operations)
+  - [User Experience Polish](#user-experience-polish)
 - [Building with AI Assistance](#building-with-ai-assistance)
   - [The Image Snapshot Workflow](#the-image-snapshot-workflow)
   - [Iterating on TUI Design](#iterating-on-tui-design)
@@ -40,13 +41,13 @@ Before diving into the implementation, let's see what we're building. Here's `ks
 
 ![Starting the chat with a Hetzner cluster request](/assets/images/ksail-copilot-chat-hetzner-start.png)
 
-**2. Confirmation prompt** — the assistant asks for verification before destructive operations
+**2. Task complete** — the assistant finishes provisioning the cluster
 
-![Verification prompt before cluster creation](/assets/images/ksail-copilot-chat-hetzner-verificiation.png)
+![Cluster creation finished in chat](/assets/images/ksail-copilot-chat-hetzner-finished.png)
 
-**3. Task complete** — cluster is created and ready to use
+**3. Verification** — the cluster appears in Hetzner Cloud
 
-![Cluster creation finished](/assets/images/ksail-copilot-chat-hetzner-finished.png)
+![Verification in Hetzner Cloud dashboard](/assets/images/ksail-copilot-chat-hetzner-verificiation.png)
 
 The entire workflow happens in the terminal — no context switching, no remembering flags.
 
@@ -67,25 +68,11 @@ Building a conversational AI interface in a terminal requires three key pieces: 
 
 ### GitHub Copilot SDK for Go
 
-The [Copilot SDK for Go](https://github.com/github/copilot-sdk-go) provides the AI backbone. At time of writing, I used v0.1.17. It handles:
+The [Copilot SDK for Go](https://github.com/github/copilot-sdk-go) provides the AI backbone. At time of writing, I used v0.1.18. It handles:
 
 - **Streaming responses** — tokens arrive as they're generated
 - **Tool calling** — the model can invoke functions you define
 - **Conversation history** — multi-turn dialogues with context
-
-```go
-client, err := copilot.NewClient()
-if err != nil {
-    return err
-}
-
-ctx := copilot.NewContext()
-ctx.AddUserMessage("Create a Kind cluster named 'dev'")
-
-stream, err := client.Chat(context.Background(), ctx,
-    copilot.WithTools(tools...),
-)
-```
 
 The SDK abstracts away the complexity of the Copilot API, letting me focus on building the experience.
 
@@ -97,42 +84,11 @@ The SDK abstracts away the complexity of the Copilot API, letting me focus on bu
 - **Update** handles messages and returns a new model
 - **View** renders the model to a string
 
-```go
-type Model struct {
-    input        textinput.Model
-    viewport     viewport.Model
-    conversation []Message
-    isStreaming  bool
-}
-
-func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
-    switch msg := msg.(type) {
-    case tea.KeyMsg:
-        if msg.Type == tea.KeyEnter && !m.isStreaming {
-            return m.sendMessage()
-        }
-    case StreamTokenMsg:
-        m.appendToken(msg.Token)
-    }
-    return m, nil
-}
-```
-
-This architecture makes state management predictable — every state transition is explicit.
+This architecture makes state management predictable — every state transition is explicit. See the [chat TUI model](https://pkg.go.dev/github.com/devantler-tech/ksail/v5/pkg/cli/ui/chat#Model) for the full implementation.
 
 ### Glamour for Markdown Rendering
 
-AI responses often include markdown formatting. [glamour](https://github.com/charmbracelet/glamour) renders it beautifully in the terminal:
-
-```go
-renderer, _ := glamour.NewTermRenderer(
-    glamour.WithAutoStyle(),
-    glamour.WithWordWrap(width),
-)
-rendered, _ := renderer.Render(markdownContent)
-```
-
-Code blocks get syntax highlighting, headers become bold, and lists render cleanly.
+AI responses often include markdown formatting. [glamour](https://github.com/charmbracelet/glamour) renders it beautifully in the terminal — code blocks get syntax highlighting, headers become bold, and lists render cleanly.
 
 ## Architecture Overview
 
@@ -140,86 +96,26 @@ With the tech stack in place, the interesting challenge was: how do we make the 
 
 ### Auto-Generated Tools from Cobra Commands
 
-Rather than manually defining ~25 tools for the Copilot SDK, I built a generator that extracts them from KSail's existing Cobra commands:
+KSail has 92+ CLI commands. Manually defining tools for the Copilot SDK would be tedious and drift-prone. So I built a [generator](https://pkg.go.dev/github.com/devantler-tech/ksail/v5/pkg/svc/chat/generator) that auto-discovers them from KSail's existing Cobra command tree, converts flags to JSON Schema, and creates tool handlers automatically.
 
-```go
-// generator/generator.go
-func GenerateTools() ([]copilot.Tool, error) {
-    // Walk the Cobra command tree
-    rootCmd := cmd.NewRootCmd()
-
-    var tools []copilot.Tool
-    for _, command := range walkCommands(rootCmd) {
-        // Convert Cobra flags to JSON Schema
-        schema := flagsToSchema(command.Flags())
-
-        tools = append(tools, copilot.Tool{
-            Name:        convertName(command.Name()),  // "cluster create" → "cluster_create"
-            Description: command.Short,
-            Schema:      schema,
-            Handler:     createHandler(command),
-        })
-    }
-    return tools, nil
-}
-```
-
-This approach ensures the AI always has access to the exact same commands as the CLI — no drift, no manual synchronization.
+**The lesson learned**: auto-discovering all 92 commands broke things. LLMs have a practical limit on how many tools they can reason about effectively — this is a known issue called *tool overload*. When presented with too many options, the model's ability to select the right tool degrades significantly. Some commands (like internal debug utilities) also shouldn't be exposed at all. The solution was to keep auto-discovery but add an exclusion filter — now only ~25 curated commands become tools. Best of both worlds: no manual sync, but a focused toolset the model can actually use well.
 
 ### Embedded Documentation Context
 
-The assistant needs to understand KSail's concepts. I use `go:embed` to bundle 100+ documentation files at compile time:
-
-```go
-//go:embed docs/*
-var docsFS embed.FS
-
-func BuildSystemPrompt() string {
-    // Walk embedded docs and build context
-    var context strings.Builder
-    fs.WalkDir(docsFS, ".", func(path string, d fs.DirEntry, err error) error {
-        if !d.IsDir() {
-            content, _ := docsFS.ReadFile(path)
-            context.WriteString(string(content))
-        }
-        return nil
-    })
-    return context.String()
-}
-```
-
-This gives the model deep knowledge of KSail's architecture, configuration options, and best practices — without requiring network requests.
+The assistant needs to understand KSail's concepts. I use `go:embed` to bundle 100+ documentation files at compile time, giving the model deep knowledge of KSail's architecture, configuration options, and best practices — without requiring network requests. See [`BuildSystemContext`](https://pkg.go.dev/github.com/devantler-tech/ksail/v5/pkg/svc/chat#BuildSystemContext) for details.
 
 ### Security Boundaries for File Operations
 
-The assistant can read and write files, but only within the current working directory. The `securePath` function validates all paths:
+The assistant can read and write files, but only within the current working directory. The `securePath` function in the [tools package](https://pkg.go.dev/github.com/devantler-tech/ksail/v5/pkg/svc/chat) validates all paths by resolving symlinks and verifying the target stays within the workspace — preventing symlink escape attacks where a malicious symlink could point outside the workspace.
+### User Experience Polish
 
-```go
-func securePath(workDir, path string) (string, error) {
-    // Resolve symlinks to prevent escape attacks
-    absWorkDir, err := filepath.EvalSymlinks(workDir)
-    if err != nil {
-        return "", err
-    }
+Beyond the core AI integration, the TUI includes thoughtful UX details:
 
-    // Clean and resolve the target path
-    absPath := filepath.Join(absWorkDir, path)
-    realPath, err := filepath.EvalSymlinks(absPath)
-    if err != nil {
-        return "", err
-    }
-
-    // Verify it's still within the workspace
-    if !strings.HasPrefix(realPath, absWorkDir) {
-        return "", fmt.Errorf("path %q is outside workspace", path)
-    }
-
-    return realPath, nil
-}
-```
-
-This prevents symlink escape attacks where a malicious symlink could point outside the workspace.
-
+- **Prompt history** — press ↑/↓ to recall previous messages
+- **Real-time tool streaming** — see command output as it runs, not just when complete
+- **Collapsible tool output** — Tab toggles individual tools, Ctrl+T toggles all
+- **Mouse scrolling** — wheel scrolls the conversation viewport
+- **Adaptive rendering** — markdown re-renders when terminal width changes
 ## Building with AI Assistance
 
 Here's the meta twist: I built an AI assistant *using* AI assistance.
@@ -262,81 +158,15 @@ Every project has its thorny edge cases. Here are the three that taught me the m
 
 ### Per-Turn Subscription Pattern
 
-Bubbletea uses subscriptions for async events (like streaming tokens). A naive approach subscribed once:
-
-```go
-// ❌ Problematic: subscription outlives the turn
-func (m Model) Init() tea.Cmd {
-    return m.subscribeToStream()
-}
-```
-
-This caused issues when starting new turns — old subscriptions would conflict. The solution was to subscribe fresh for each AI turn:
-
-```go
-// ✅ Better: manage subscription lifecycle per turn
-case UserSubmittedMsg:
-    m.outputChan = make(chan string)
-    return tea.Batch(
-        m.startChatRequest(),
-        m.subscribeOnce(),  // New subscription tied to this turn
-    )
-
-func (m Model) subscribeOnce() tea.Cmd {
-    return func() tea.Msg {
-        token, ok := <-m.outputChan
-        if !ok {
-            return StreamDoneMsg{}
-        }
-        return StreamTokenMsg{Token: token}
-    }
-}
-```
+Bubbletea uses subscriptions for async events (like streaming tokens). A naive approach subscribes once at initialization, but this causes issues when starting new turns — old subscriptions conflict with new ones. The solution was to subscribe fresh for each AI turn, creating a new channel and subscription tied to that specific conversation turn. See the [Model.Update](https://pkg.go.dev/github.com/devantler-tech/ksail/v5/pkg/cli/ui/chat#Model.Update) method for the implementation.
 
 ### Context Cancellation Challenges
 
-The Copilot SDK doesn't support mid-stream cancellation. If you cancel the context, the SDK panics rather than gracefully stopping. My workaround:
-
-```go
-// Create a context that we never cancel
-ctx := context.Background()
-
-// Use a separate flag to track "stop requested"
-if m.stopRequested {
-    // Don't start new requests, but let current one finish
-    return m, nil
-}
-```
-
-This isn't ideal, but it's documented in the code for future improvement when the SDK adds support.
+The Copilot SDK doesn't support mid-stream cancellation. If you cancel the context, the SDK panics rather than gracefully stopping. My workaround: use a context that's never cancelled, and track "stop requested" via a separate flag. This isn't ideal, but it's documented in the code for future improvement when the SDK adds support.
 
 ### Tool Result Ordering
 
-Tools can execute in any order, but results should appear in the order the model requested them. The SDK's channel-based output didn't guarantee this, so I implemented a FIFO buffer:
-
-```go
-type toolQueue struct {
-    pending []toolResult
-    mu      sync.Mutex
-}
-
-func (q *toolQueue) enqueue(result toolResult) {
-    q.mu.Lock()
-    defer q.mu.Unlock()
-    q.pending = append(q.pending, result)
-}
-
-func (q *toolQueue) dequeue() (toolResult, bool) {
-    q.mu.Lock()
-    defer q.mu.Unlock()
-    if len(q.pending) == 0 {
-        return toolResult{}, false
-    }
-    result := q.pending[0]
-    q.pending = q.pending[1:]
-    return result, true
-}
-```
+Tools can execute in any order, but results should appear in the order the model requested them. The SDK's channel-based output didn't guarantee this, so I implemented a mutex-protected FIFO buffer to ensure consistent ordering in the UI.
 
 ## What's Next
 
@@ -357,7 +187,11 @@ brew install devantler-tech/tap/ksail
 ksail chat
 
 # Or use non-TUI mode
-ksail chat --no-tui "list my clusters"
+ksail chat --tui=false "list my clusters"
 ```
 
 The full implementation is in the [KSail repository](https://github.com/devantler-tech/ksail) — the TUI lives in `pkg/cli/ui/chat/` and the tools generator in `pkg/svc/chat/generator/`. Feedback and contributions welcome!
+
+---
+
+*This post was written with AI assistance (Claude Opus 4.5 via VS Code), following my outline and intent.*
