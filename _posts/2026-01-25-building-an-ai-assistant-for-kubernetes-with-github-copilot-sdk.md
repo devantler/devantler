@@ -11,8 +11,6 @@ KSail v5 introduces `ksail chat` — an AI-powered assistant that lets you creat
 
 This post covers the technical journey of building this feature using the [GitHub Copilot SDK for Go](https://github.com/github/copilot-sdk-go), [Bubbletea](https://github.com/charmbracelet/bubbletea) TUI framework, and [glamour](https://github.com/charmbracelet/glamour) for markdown rendering.
 
-![KSail Copilot Chat in action](/assets/images/ksail-copilot-chat.png)
-
 - [See It in Action](#see-it-in-action)
 - [Motivation](#motivation)
 - [The Tech Stack](#the-tech-stack)
@@ -107,6 +105,7 @@ The assistant needs to understand KSail's concepts. I use `go:embed` to bundle 1
 ### Security Boundaries for File Operations
 
 The assistant can read and write files, but only within the current working directory. The `securePath` function in the [tools package](https://pkg.go.dev/github.com/devantler-tech/ksail/v5/pkg/svc/chat) validates all paths by resolving symlinks and verifying the target stays within the workspace — preventing symlink escape attacks where a malicious symlink could point outside the workspace.
+
 ### User Experience Polish
 
 Beyond the core AI integration, the TUI includes thoughtful UX details:
@@ -116,6 +115,7 @@ Beyond the core AI integration, the TUI includes thoughtful UX details:
 - **Collapsible tool output** — Tab toggles individual tools, Ctrl+T toggles all
 - **Mouse scrolling** — wheel scrolls the conversation viewport
 - **Adaptive rendering** — markdown re-renders when terminal width changes
+
 ## Building with AI Assistance
 
 Here's the meta twist: I built an AI assistant *using* AI assistance.
