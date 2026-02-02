@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building KSail: From Shell Scripts to .NET to Go"
-description: The journey of building KSail, a Kubernetes SDK for local GitOps development, through three major rewrites and what I learned along the way.
+description: The journey of building KSail, a tool for creating, maintaining and operating Kubernetes clusters with ease, through three major rewrites and what I learned along the way.
 image: "assets/images/ksail-logo.jpeg"
 ---
 

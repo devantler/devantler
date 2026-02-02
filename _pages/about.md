@@ -63,11 +63,11 @@ public class DevProfile {
 
 ## Talks and Presentations 🎤
 
-### KSail - a Kubernetes SDK for local GitOps development and CI <span style="float:right">KCD Denmark 2024</span>
+### KSail - a tool for creating, maintaining and operating Kubernetes clusters with ease. and CI <span style="float:right">KCD Denmark 2024</span>
 
 <div align="center">
   <a href="https://youtu.be/Q-Hfn_-B7p8?si=2Uec_kld--fNw3gm" target="_blank" style="display: block; margin: 0 auto;">
-    <img class="lazy" src="assets/images/talks/kcd-denmark-2024-ksail.jpeg" data-src="assets/images/talks/kcd-denmark-2024-ksail.jpeg" alt="KSail - a Kubernetes SDK for local GitOps development and CI" width="400"><br>
+    <img class="lazy" src="assets/images/talks/kcd-denmark-2024-ksail.jpeg" data-src="assets/images/talks/kcd-denmark-2024-ksail.jpeg" alt="KSail - a tool for creating, maintaining and operating Kubernetes clusters with ease. and CI" width="400"><br>
     🎥 Watch the talk! 🎥
   </a>
 </div>

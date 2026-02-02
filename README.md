@@ -60,7 +60,7 @@ public class DevProfile {
 
 <div align="center">
   <a href="https://youtu.be/Q-Hfn_-B7p8?si=2Uec_kld--fNw3gm" target="_blank" style="display: block; margin: 0 auto;">
-    <img class="lazy" src="assets/images/talks/kcd-denmark-2024-ksail.jpeg" data-src="assets/images/talks/kcd-denmark-2024-ksail.jpeg" alt="KSail - a Kubernetes SDK for local GitOps development and CI" width="400"><br>
+    <img class="lazy" src="assets/images/talks/kcd-denmark-2024-ksail.jpeg" data-src="assets/images/talks/kcd-denmark-2024-ksail.jpeg" alt="KSail - a tool for creating, maintaining and operating Kubernetes clusters with ease. and CI" width="400"><br>
     🎥 Watch the talk! 🎥
   </a>
 </div>
@@ -103,16 +103,14 @@ As a Developer Experience Engineer at TV2, I am responsible for improving the de
 
 ## [Projects 📽️](https://devantler.com/projects)
 
-| Project Name                                             | Description                                                                                                  | State  |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------ |
-| [🛥️🐳 KSail](https://github.com/devantler-tech/ksail)      | An all-in-one SDK for spinning up clusters and managing workloads—right from your own machine..              | Active |
+| Project Name                                              | Description                                                                                                  | State  |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------ |
+| [🛥️🐳 KSail](https://github.com/devantler-tech/ksail)     | An all-in-one SDK for spinning up clusters and managing workloads—right from your own machine..              | Active |
 | [☸️ Platform](https://github.com/devantler-tech/platform) | DevantlerTech Platform - including deployment artifacts for running the platform in CI/CD and in Talos Omni. | Active |
 
 ## [Templates 📁](https://devantler.com/templates)
 
-| Template Name                                                        | Description                              | State  |
-| -------------------------------------------------------------------- | ---------------------------------------- | ------ |
+| Template Name                                                         | Description                              | State  |
+| --------------------------------------------------------------------- | ---------------------------------------- | ------ |
 | [#️⃣ .NET Template](https://github.com/devantler-tech/dotnet-template) | A simple .NET template for new projects. | Active |
-| [🦫 Go Template](https://github.com/devantler-tech/go-template) | A simple Go template for new projects.  | Active |
-
-
+| [🦫 Go Template](https://github.com/devantler-tech/go-template)       | A simple Go template for new projects.   | Active |

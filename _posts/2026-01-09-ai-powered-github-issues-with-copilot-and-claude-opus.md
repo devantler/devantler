@@ -328,7 +328,7 @@ I use this approach in two contexts:
 
 ### Personal Projects (KSail)
 
-For [KSail](https://github.com/devantler-tech/ksail), my Kubernetes SDK for local GitOps development, this workflow has been invaluable. When I notice something that needs improvement, I can quickly generate a detailed issue without interrupting my flow. The AI understands the Go codebase, the embedded tool clients, and the overall architecture — producing issues that accurately describe both problems and solutions.
+For [KSail](https://github.com/devantler-tech/ksail), my tool for creating, maintaining and operating Kubernetes clusters with ease, this workflow has been invaluable. When I notice something that needs improvement, I can quickly generate a detailed issue without interrupting my flow. The AI understands the Go codebase, the embedded tool clients, and the overall architecture — producing issues that accurately describe both problems and solutions.
 
 ### Professional Work (TV 2)
 
