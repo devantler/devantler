@@ -1,6 +1,8 @@
 <div align="center">
 
-# Hey, I'm Nikolai 👋🏻
+# Hey, I'm Nikolai AKA devantler 👋🏻
+
+![Nikolai Emil Damm](profile.jpg)
 
 **Developer Experience Engineer** at TV 2 · Open Source Enthusiast · Cloud Native Advocate
 
