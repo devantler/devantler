@@ -2,7 +2,7 @@
 
 # Hey, I'm Nikolai AKA devantler 👋🏻
 
-![Nikolai Emil Damm](profile.jpg)
+<img src="profile.jpg" alt="Nikolai Emil Damm" width="350">
 
 **Developer Experience Engineer** at TV 2 · Open Source Enthusiast · Cloud Native Advocate
 
