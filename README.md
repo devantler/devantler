@@ -12,7 +12,7 @@ MSc in Software Engineering from Denmark, building tools that make Kubernetes de
 
 ### What I'm Working On
 
-🛥️ [**KSail**](https://github.com/devantler-tech/ksail) — A Kubernetes SDK for local GitOps development and CI\
+🛥️ [**KSail**](https://github.com/devantler-tech/ksail) — A Kubernetes SDK for Kubernetes development\
 ☸️ [**Platform**](https://github.com/devantler-tech/platform) — GitOps-driven Talos Linux Kubernetes platform on Hetzner
 
 ---
